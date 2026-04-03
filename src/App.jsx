@@ -11,7 +11,7 @@ function App() {
       <img 
         src={profile} 
         alt="Profile" 
-        className="w-48 h-48 rounded-full object-cover"
+        className="w-60 h-60 rounded-full object-cover"
       />
 
       <div className="flex-1">
@@ -33,6 +33,9 @@ function App() {
           modern design trends to create better and more intuitive user
           experiences.
         </p>
+        <button className="ml-140 mt-6 bg-gray-500 hover:bg-gray-800 text-white font-inter font-bold py-3 px-6 rounded-lg transition duration-300 ease-in-out transform hover:scale-105">
+          Resume
+        </button>
       </div>
 
     </div>
