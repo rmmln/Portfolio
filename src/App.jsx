@@ -36,7 +36,7 @@ function App() {
             <img src={fb} alt="Facebook" className="mt-3 w-5 h-5 transition duration-300 ease-in-out transform hover:scale-120" />
           </button>
           <button>
-            <img src={ig} alt="Instagram" className="mt-3 w-5 h-5 transition duration-300 ease-in-out transform hover:scale-120" />
+            <img src={ig} alt="Instagram" className="mt-3 w-5.5 h-5.5 transition duration-300 ease-in-out transform hover:scale-120" />
           </button>
           <button>
             <img src={linkedin} alt="LinkedIn" className="mt-3 w-5 h-5 transition duration-300 ease-in-out transform hover:scale-120" />
