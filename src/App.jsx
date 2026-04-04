@@ -3,10 +3,10 @@ import profile from "./assets/profile.png";
 
 function App() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-black via-gray-800 to-gray-900 px-4 py-8">
-  <div className="w-full max-w-5xl backdrop-blur-xl bg-white/10 border border-white/20 rounded-2xl p-6 md:p-10 shadow-2xl">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-black via-gray-800 to-gray-900 ">
+      <div className="w-full max-w-4xl backdrop-blur-xl bg-white/10 border border-white/20 rounded-2xl p-2 md:p-10 shadow-4xl">
     
-    <div className="flex flex-col md:flex-row items-center gap-8 md:gap-10">
+    <div className="flex flex-col md:flex-row items-center  md:gap-10">
       
       <img 
         src={profile} 
@@ -24,7 +24,7 @@ function App() {
           />
         </h1>
 
-        <p className="mt-5 text-sm sm:text-base md:text-lg text-white/80 font-inter font-light leading-8 text-justify">
+        <p className="mt-2 text-sm sm:text-base md:text-lg text-white font-inter font-light leading-6 text-justify">
           Im an aspiring UI/UX designer passionate about creating clean,
           user-friendly, and visually engaging interfaces. I enjoy turning
           ideas into meaningful digital experiences and continuously
@@ -33,7 +33,7 @@ function App() {
           modern design trends to create better and more intuitive user
           experiences.
         </p>
-        <button className="ml-140 mt-6 bg-gray-500 hover:bg-gray-800 text-white font-inter font-bold py-3 px-6 rounded-lg transition duration-300 ease-in-out transform hover:scale-105">
+        <button className="flex justify-center mt-3 bg-gray-500 hover:bg-gray-900 text-white font-inter font-bold py-2 px-6 rounded-lg transition duration-300 ease-in-out transform hover:scale-105">
           Resume
         </button>
       </div>
