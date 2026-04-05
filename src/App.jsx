@@ -17,7 +17,7 @@ function App() {
 
       <div className="flex-1">
           <p className="text-xs text-white font-inter font-light">
-          IT Student | UI/UX Designer
+          IT Student | UI/UX Designer | Buwrath | Foot Enthusiast
         </p>
         <h1 className="tracking-wideflex items-start text-4xl font-inter font-bold text-white text-center md:text-left">
           <TypeAnimation
