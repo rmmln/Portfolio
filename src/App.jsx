@@ -6,8 +6,9 @@ import linkedin from "./assets/linkedin.svg";
 import github from "./assets/github.svg";
 function App() {
   return (
-    <div className="flex flex-col min-h-screen flex items-center justify-center bg-gradient-to-br from-black via-gray-800 to-gray-900">
-        <div className="flex flex-row md:flex-row items-center  md:gap-4">
+    <div className="gap-2 flex flex-col min-h-screen flex items-center justify-start bg-gradient-to-br from-black via-gray-800 to-gray-900">
+      <div className="flex w-full max-w-xl p-5 shadow-4xl">
+        <div className="flex flex-row items-center  md:gap-4">
           <img 
             src={profile} 
             alt="Profile" 
@@ -32,17 +33,19 @@ function App() {
         </button>
         <div className="flex flex-row gap-1 justify-start ">
           <button>
-            <img src={fb} alt="Facebook" className="mt-3 w-5 h-5 transition duration-300 ease-in-out transform hover:scale-120" />
+            <img src={fb} alt="Facebook" className="mt-3 w-5 h-5 transition duration-300 ease-in-out transform hover:scale-110" />
           </button>
           <button>
-            <img src={ig} alt="Instagram" className="mt-3 w-5.5 h-5.5 transition duration-300 ease-in-out transform hover:scale-120" />
+            <img src={ig} alt="Instagram" className="mt-3 w-5.5 h-5.5 transition duration-300 ease-in-out transform hover:scale-110" />
           </button>
           <button>
-            <img src={linkedin} alt="LinkedIn" className="mt-3 w-5 h-5 transition duration-300 ease-in-out transform hover:scale-120" />
+            <img src={linkedin} alt="LinkedIn" className="mt-3 w-5 h-5 transition duration-300 ease-in-out transform hover:scale-110" />
           </button>
           <button>
-            <img src={github} alt="GitHub" className="mt-3 w-5.5 h-5.5 rounded-lg transition duration-300 ease-in-out transform hover:scale-120" />
+            <img src={github} alt="GitHub" className="mt-3 w-5.5 h-5.5 rounded-lg transition duration-300 ease-in-out transform hover:scale-110" />
           </button>
+        </div>
+
       </div>
     </div>
   </div>
