@@ -4,6 +4,7 @@ import fb from "./assets/fb.svg";
 import ig from "./assets/ig.svg";
 import linkedin from "./assets/linkedin.svg";
 import github from "./assets/github.svg";
+import location from "./assets/location.svg";
 function App() {
   return (
     <div className="gap-2 flex flex-col min-h-screen flex items-center justify-start bg-gradient-to-br from-black via-gray-800 to-gray-900">
@@ -16,9 +17,7 @@ function App() {
           />
 
       <div className="flex-1">
-          <p className="text-xs text-white font-inter font-light">
-          IT Student | UI/UX Designer | Foot Enthusiast
-        </p>
+          
         <h1 className="tracking-wideflex items-start text-4xl font-inter font-bold text-white text-center md:text-left">
           <TypeAnimation
             sequence={["ROBERT MOLENO", 2000, "", 50]}
@@ -27,7 +26,13 @@ function App() {
             cursor={true}
           />
         </h1>
-      
+        <p className="text-xs text-white font-inter font-light">
+          <img src={location} alt="Location" className="w-4 h-4 inline-block mr-2 opacity-80" />
+          Cavite, Philippines
+        </p>
+      <p className="text-xs text-white font-inter font-light">
+          IT Student | UI/UX Designer 
+        </p>
         <button className=" mt-3 bg-gray-500 hover:bg-gray-900 text-sm text-white font-inter font-bold py-1 px-6 rounded-md transition duration-300 ease-in-out transform hover:scale-105">
           Resume
         </button>
