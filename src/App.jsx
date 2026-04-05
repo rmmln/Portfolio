@@ -7,7 +7,6 @@ import github from "./assets/github.svg";
 function App() {
   return (
     <div className="flex flex-col min-h-screen flex items-center justify-center bg-gradient-to-br from-black via-gray-800 to-gray-900">
-      <div className="m-2 w-full max-w-xl backdrop-blur-xl bg-white/10 border border-white/20 rounded-2xl p-5 shadow-4xl">
         <div className="flex flex-row md:flex-row items-center  md:gap-4">
           <img 
             src={profile} 
@@ -44,8 +43,6 @@ function App() {
           <button>
             <img src={github} alt="GitHub" className="mt-3 w-5.5 h-5.5 rounded-lg transition duration-300 ease-in-out transform hover:scale-120" />
           </button>
-        </div>
-
       </div>
     </div>
   </div>
