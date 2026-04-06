@@ -16,7 +16,7 @@ function App() {
             className="w-40 h-40 rounded-full object-cover"
           />
 
-      <div className="flex flex-col">
+      <div className="flex flex-col gap-1">
           
         <h1 className="tracking-widest flex items-start text-3xl font-inter font-bold text-white text-center md:text-left">
           <TypeAnimation
@@ -33,7 +33,7 @@ function App() {
       <p className="text-sm text-white font-inter font-light">
           IT Student | UI/UX Designer 
         </p>
-        <div className="flex flex-row gap-2">
+        <div className="flex justify-between  w-full gap-2">
         <button className=" mt-3 bg-white hover:bg-gray-100 text-sm text-gray-900 font-inter font-semibold py-0 px-6 rounded-sm transition duration-300 ease-in-out transform hover:scale-105">
           Resume
         </button>
@@ -58,62 +58,8 @@ function App() {
   </div>
   <div className="flex gap-2">
   <div className="w-full max-w-xl backdrop-blur-xl bg-white/10 border border-white/20 rounded-2xl p-5 shadow-4xl"> 
-    <div className="mt-16 max-w-3xl mx-auto">
-  <h2 className="text-2xl md:text-3xl font-bold text-white mb-8">
-    Education
-  </h2>
 
-  <div className="relative space-y-10">
-
-    {/* LINE */}
-    <div className="absolute left-[7px] top-0 h-full w-[2px] bg-white/20"></div>
-
-    {/* ITEM */}
-    <div className="relative flex items-start gap-4">
-      {/* DOT */}
-      <div className="w-3 h-3 mt-2 rounded-full bg-white z-10"></div>
-
-      {/* CONTENT */}
-      <div>
-        <h3 className="text-lg font-semibold text-white">
-          BS Information Technology
-        </h3>
-        <p className="text-gray-400 text-sm">
-          Your University • 2021 - Present
-        </p>
-      </div>
     </div>
-
-    {/* ITEM */}
-    <div className="relative flex items-start gap-4">
-      <div className="w-3 h-3 mt-2 rounded-full border border-white/40 z-10"></div>
-
-      <div>
-        <h3 className="text-lg font-semibold text-white">
-          Senior High School
-        </h3>
-        <p className="text-gray-400 text-sm">
-          Your School • 2019 - 2021
-        </p>
-      </div>
-    </div>
-
-    {/* ITEM */}
-    <div className="relative flex items-start gap-4">
-      <div className="w-3 h-3 mt-2 rounded-full border border-white/40 z-10"></div>
-
-      <div>
-        <h3 className="text-lg font-semibold text-white">
-          Junior High School
-        </h3>
-        <p className="text-gray-400 text-sm">
-          Your School • 2015 - 2019
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
     <div className="w-full max-w-2xl backdrop-blur-xl bg-white/10 border border-white/20 rounded-2xl p-5 shadow-4xl">
       <h1 className="text-white text-3xl font-bold">About</h1>
         <p className=" mt-2 text-sm text-white font-inter font-light leading-5 text-justify">
