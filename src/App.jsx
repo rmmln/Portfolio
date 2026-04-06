@@ -16,9 +16,9 @@ function App() {
             className="w-40 h-40 rounded-full object-cover"
           />
 
-      <div className="flex-1">
+      <div className="flex flex-col">
           
-        <h1 className="tracking-wideflex items-start text-4xl font-inter font-bold text-white text-center md:text-left">
+        <h1 className="tracking-widest flex items-start text-3xl font-inter font-bold text-white text-center md:text-left">
           <TypeAnimation
             sequence={["ROBERT MOLENO", 2000, "", 50]}
             speed={50}
@@ -27,13 +27,14 @@ function App() {
           />
         </h1>
         <p className="text-xs text-white font-inter font-light">
-          <img src={location} alt="Location" className="w-4 h-4 inline-block mr-2 opacity-80" />
+          <img src={location} alt="Location" className="w-4 h-4 inline-block opacity-80" />
           Cavite, Philippines
         </p>
-      <p className="text-xs text-white font-inter font-light">
+      <p className="text-sm text-white font-inter font-light">
           IT Student | UI/UX Designer 
         </p>
-        <button className=" mt-3 bg-gray-500 hover:bg-gray-900 text-sm text-white font-inter font-bold py-1 px-6 rounded-md transition duration-300 ease-in-out transform hover:scale-105">
+        <div className="flex flex-row gap-2">
+        <button className=" mt-3 bg-white hover:bg-gray-100 text-sm text-gray-900 font-inter font-semibold py-0 px-6 rounded-sm transition duration-300 ease-in-out transform hover:scale-105">
           Resume
         </button>
         <div className="flex flex-row gap-1 justify-start ">
@@ -49,23 +50,29 @@ function App() {
           <button>
             <img src={github} alt="GitHub" className="mt-3 w-5.5 h-5.5 rounded-lg transition duration-300 ease-in-out transform hover:scale-110" />
           </button>
+          </div>
         </div>
 
       </div>
     </div>
   </div>
-  <div className="w-full max-w-xl backdrop-blur-xl bg-white/10 border border-white/20 rounded-2xl p-5 shadow-4xl">
-    <h1 className="text-white text-3xl font-bold">About</h1>
-      <p className=" mt-2 text-sm text-white font-inter font-light leading-5 text-justify">
-              Im an aspiring UI/UX designer passionate about creating clean,
-              user-friendly, and visually engaging interfaces. I enjoy turning
-              ideas into meaningful digital experiences and continuously
-              improving my skills in design and front-end development. Im
-              always eager to learn, improve my skills, and stay updated with
-              modern design trends to create better and more intuitive user
-              experiences.
-      </p>
-    </div>    
+  <div className="flex gap-2">
+  <div className="w-full max-w-xl backdrop-blur-xl bg-white/10 border border-white/20 rounded-2xl p-5 shadow-4xl"> 
+
+    </div>
+    <div className="w-full max-w-2xl backdrop-blur-xl bg-white/10 border border-white/20 rounded-2xl p-5 shadow-4xl">
+      <h1 className="text-white text-3xl font-bold">About</h1>
+        <p className=" mt-2 text-sm text-white font-inter font-light leading-5 text-justify">
+                Im an aspiring UI/UX designer passionate about creating clean,
+                user-friendly, and visually engaging interfaces. I enjoy turning
+                ideas into meaningful digital experiences and continuously
+                improving my skills in design and front-end development. Im
+                always eager to learn, improve my skills, and stay updated with
+                modern design trends to create better and more intuitive user
+                experiences.
+        </p>
+    </div> 
+  </div>   
 </div>
   );
 }
