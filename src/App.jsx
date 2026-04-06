@@ -33,7 +33,7 @@ function App() {
       <p className="text-sm text-white font-inter font-light">
           IT Student | UI/UX Designer 
         </p>
-        <div className="flex justify-between  w-full gap-2">
+        <div className="flex w-full gap-2">
         <button className=" mt-3 bg-white hover:bg-gray-100 text-sm text-gray-900 font-inter font-semibold py-0 px-6 rounded-sm transition duration-300 ease-in-out transform hover:scale-105">
           Resume
         </button>
