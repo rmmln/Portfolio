@@ -24,7 +24,7 @@ function App() {
             className={`h-5 w-5 transform rounded-full bg-white transition-transform duration-300 ${isDarkMode ? 'translate-x-5' : 'translate-x-0'}`}
           />
         </button>
-        <div className="flex flex-row items-start gap-4 md:gap-4">
+        <div className="flex flex-row gap-4 md:gap-4">
           <img 
             src={profile} 
             alt="Profile" 
