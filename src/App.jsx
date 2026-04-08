@@ -79,12 +79,12 @@ function App() {
     </div>
   </div>
       <div className="w-full max-w-4xl grid grid-cols-[240px_minmax(0,1fr)] gap-2">
-        <div className={`row-span-2 backdrop-blur-xl border rounded-
+        <div className={`row-span-2 backdrop-blur-xl border rounded-xl
           xl p-5 shadow-4xl transition-colors duration-300 ${isDarkMode ? 'bg-white/10 border-white/20' : 'bg-white border-gray-200'}`}>
           <h1 className={`text-2xl font-bold transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Technical Stack</h1>
         </div>
 
-        <div className={`w-full backdrop-blur-xl border rounded-2xl p-5 shadow-4xl transition-colors duration-300 ${isDarkMode ? 'bg-white/10 border-white/20' : 'bg-white border-gray-200'}`}>
+        <div className={`w-full backdrop-blur-xl border rounded-xl p-5 shadow-4xl transition-colors duration-300 ${isDarkMode ? 'bg-white/10 border-white/20' : 'bg-white border-gray-200'}`}>
           <h1 className={`text-2xl font-bold transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>About</h1>
           <p className={`w-full max-w-full mt-2 text-sm font-inter leading-5 text-justify transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-gray-800'}`}>
             Im an aspiring UI/UX designer passionate about creating clean,
@@ -96,7 +96,7 @@ function App() {
             experiences.
           </p>
         </div>
-        <div className={`w-full backdrop-blur-xl border rounded-2xl p-5 shadow-4xl transition-colors duration-300 ${isDarkMode ? 'bg-white/10 border-white/20' : 'bg-white border-gray-200'}`}>
+        <div className={`w-full backdrop-blur-xl border rounded-xl p-5 shadow-4xl transition-colors duration-300 ${isDarkMode ? 'bg-white/10 border-white/20' : 'bg-white border-gray-200'}`}>
           <Stepper steps={educationSteps} isDarkMode={isDarkMode} />
         </div>
       </div>
