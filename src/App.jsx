@@ -7,8 +7,15 @@ import linkedin from "./assets/linkedin.svg";
 import github from "./assets/github.svg";
 import location from "./assets/location.svg";
 import cvPdf from "./assets/MolenoCV.pdf";
+import Stepper from "./Stepper";
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(true);
+  const educationSteps = [
+    { title: "General Artemio Ricarte Memorial School", year: "2008-2014" },
+    { title: "Governor Ferrer Memorial National High School - Main", year: "2014-2018" },
+    { title: "Technical Vocational Computer Programming - LYFJSHS", year: "2018-2020" },
+    { title: "Bachelor of Science in Information Technology - CVSU", year: "2022-Present" },
+  ];
 
   const toggleTheme = () => {
     setIsDarkMode(!isDarkMode);
@@ -71,29 +78,28 @@ function App() {
       </div>
     </div>
   </div>
-  <div className="flex flex-row items-start gap-2 w-full max-w-4xl">
-  <div className={`w-1/4 min-w-[240px] backdrop-blur-xl border rounded-2xl p-5 shadow-4xl transition-colors duration-300 ${isDarkMode ? 'bg-white/10 border-white/20' : 'bg-white border-gray-200'}`}> 
-      <h1 className={`text-2xl font-bold transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Education</h1>
-      <ul className={` leading-5 list-disc text-xs font-inter pl-5 transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-gray-800'}`}>
-        <li>Bachelor of Science in Information Technology - CVSU (2022-Present)</li>
-        <li>Technical Vocational Computer Programming - LYFJSHS (2018-2020)</li>
-        <li>Governor Ferrer Memorial National High School - Main (2014-2018)</li>
-        <li>General Artemio Ricarte Memorial School - (2008-2014)</li>
-        </ul>
-    </div>
-    <div className={`flex-1 self-start backdrop-blur-xl border rounded-2xl p-5 shadow-4xl transition-colors duration-300 ${isDarkMode ? 'bg-white/10 border-white/20' : 'bg-white border-gray-200'}`}>
-      <h1 className={`text-2xl font-bold transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>About</h1>
-        <p className={`w-full max-w-full mt-2 text-sm font-inter leading-5 text-justify transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-gray-800'}`}>
-                Im an aspiring UI/UX designer passionate about creating clean,
-                user-friendly, and visually engaging interfaces. I enjoy turning
-                ideas into meaningful digital experiences and continuously
-                improving my skills in design and front-end development. Im
-                always eager to learn, improve my skills, and stay updated with
-                modern design trends to create better and more intuitive user
-                experiences.
-        </p>
-    </div> 
-  </div>   
+      <div className="w-full max-w-4xl grid grid-cols-[240px_minmax(0,1fr)] gap-2">
+        <div className={`row-span-2 backdrop-blur-xl border rounded-
+          xl p-5 shadow-4xl transition-colors duration-300 ${isDarkMode ? 'bg-white/10 border-white/20' : 'bg-white border-gray-200'}`}>
+          <h1 className={`text-2xl font-bold transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Technical Stack</h1>
+        </div>
+
+        <div className={`w-full backdrop-blur-xl border rounded-2xl p-5 shadow-4xl transition-colors duration-300 ${isDarkMode ? 'bg-white/10 border-white/20' : 'bg-white border-gray-200'}`}>
+          <h1 className={`text-2xl font-bold transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>About</h1>
+          <p className={`w-full max-w-full mt-2 text-sm font-inter leading-5 text-justify transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-gray-800'}`}>
+            Im an aspiring UI/UX designer passionate about creating clean,
+            user-friendly, and visually engaging interfaces. I enjoy turning
+            ideas into meaningful digital experiences and continuously
+            improving my skills in design and front-end development. Im
+            always eager to learn, improve my skills, and stay updated with
+            modern design trends to create better and more intuitive user
+            experiences.
+          </p>
+        </div>
+        <div className={`w-full backdrop-blur-xl border rounded-2xl p-5 shadow-4xl transition-colors duration-300 ${isDarkMode ? 'bg-white/10 border-white/20' : 'bg-white border-gray-200'}`}>
+          <Stepper steps={educationSteps} isDarkMode={isDarkMode} />
+        </div>
+      </div>
 </div>
   );
 }
