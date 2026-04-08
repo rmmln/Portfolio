@@ -6,6 +6,7 @@ import ig from "./assets/ig.svg";
 import linkedin from "./assets/linkedin.svg";
 import github from "./assets/github.svg";
 import location from "./assets/location.svg";
+import cvPdf from "./assets/MolenoCV.pdf";
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(true);
 
@@ -24,14 +25,14 @@ function App() {
             className={`h-5 w-5 transform rounded-full bg-white transition-transform duration-300 ${isDarkMode ? 'translate-x-5' : 'translate-x-0'}`}
           />
         </button>
-        <div className="flex flex-row gap-4 md:gap-4">
+        <div className="flex flex-row gap-4">
           <img 
             src={profile} 
             alt="Profile" 
             className="w-40 h-40 rounded-full object-cover"
           />
 
-      <div className="flex flex-col justify-center gap-1 flex-1">
+      <div className="flex flex-col justify-center gap-1">
           
         <h1 className={`tracking-widest flex items-start text-3xl font-inter font-bold text-left transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
           <TypeAnimation
@@ -42,35 +43,35 @@ function App() {
           />
         </h1>
         <p className={`text-xs font-inter font-light transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-gray-700'}`}>
-          <img src={location} alt="Location" className={`w-4 h-4 inline-block transition-all duration-300 ${isDarkMode ? 'opacity-80' : 'brightness-0'}`} />
+          <img src={location} alt="Location" className={`w-4 h-4 inline-block transition-all duration-300 ${isDarkMode ? 'opacity-100' : 'brightness-0'}`} />
           Cavite, Philippines
         </p>
       <p className={`text-sm font-inter font-light transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-gray-700'}`}>
           IT Student | UI/UX Designer 
         </p>
         <div className="flex w-full gap-2 items-center">
-        <button className={`text-sm font-inter font-semibold py-1 px-6 rounded-sm transition duration-300 ease-in-out transform hover:scale-105 ${isDarkMode ? 'bg-white text-gray-900 hover:bg-gray-100' : 'bg-black text-white hover:bg-gray-800'}`}>
-          Resume
-        </button>
+        <a href={cvPdf} download="MolenoCV.pdf" target="_blank" rel="noopener noreferrer" className={`text-xs font-inter font-semibold py-1 px-6 rounded-sm transition duration-300 ease-in-out transform hover:scale-105 ${isDarkMode ? 'bg-white text-gray-900 hover:bg-gray-100' : 'bg-black text-white hover:bg-gray-800'}`}>
+          View CV
+        </a>
         <div className="flex flex-row gap-1 justify-start">
-          <button className="transition-all duration-300">
-            <img src={fb} alt="Facebook" className={`w-5 h-5 transition duration-300 ease-in-out transform hover:scale-110 ${isDarkMode ? 'opacity-100 hover:opacity-100' : 'invert'}`} />
-          </button>
-          <button className="transition-all duration-300">
-            <img src={ig} alt="Instagram" className={`w-5.5 h-5.5 transition duration-300 ease-in-out transform hover:scale-110 ${isDarkMode ? 'opacity-100 hover:opacity-100' : 'invert'}`} />
-          </button>
-          <button className="transition-all duration-300">
-            <img src={linkedin} alt="LinkedIn" className={`w-5 h-5 transition duration-300 ease-in-out transform hover:scale-110 ${isDarkMode ? ' hover:opacity-100' : 'invert'}`} />
-          </button>
-          <button className="transition-all duration-300">
-            <img src={github} alt="GitHub" className={`w-5.5 h-5.5 rounded-lg transition duration-300 ease-in-out transform hover:scale-110 ${isDarkMode ? 'opacity-80 hover:opacity-100' : 'invert'}`} />
-          </button>
+          <a href="https://www.facebook.com/rmoleno15" target="_blank" rel="noopener noreferrer">
+            <img src={fb} alt="Facebook" className={`w-5 h-5 transition duration-300 ease-in-out transform hover:scale-110 ${isDarkMode ? 'opacity-100' : 'invert'}`} />
+          </a>
+          <a href="https://www.instagram.com/_rm.mndz" target="_blank" rel="noopener noreferrer">
+            <img src={ig} alt="Instagram" className={`w-5.5 h-5.5 transition duration-300 ease-in-out transform hover:scale-110 ${isDarkMode ? 'opacity-100 ' : 'invert'}`} />
+          </a>
+          <a href="https://www.linkedin.com/in/robert-moleno?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer">    
+            <img src={linkedin} alt="LinkedIn" className={`w-5.5 h-5.5 transition duration-300 ease-in-out transform hover:scale-110 ${isDarkMode ? ' opacity-100 ' : 'invert'}`} />
+          </a>
+          <a href="https://github.com/rmmln" target="_blank" rel="noopener noreferrer">
+            <img src={github} alt="GitHub" className={`w-6 h-6 rounded-lg transition duration-300 ease-in-out transform hover:scale-110 ${isDarkMode ? 'opacity-100' : 'invert'}`} />
+          </a>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div className="flex flex-col items-center  gap-2  w-full max-w-4xl">
+  <div className="flex flex-row items-center  gap-2  w-full max-w-4xl">
   <div className={`w-full max-w-xl backdrop-blur-xl border rounded-2xl p-5 shadow-4xl transition-colors duration-300 ${isDarkMode ? 'bg-white/10 border-white/20' : 'bg-black/10 border-black/20'}`}> 
       <h1 className={`text-xl font-bold transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Education</h1>
       <ul className={`list-disc text-xs font-inter pl-5 transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-gray-800'}`}>
@@ -80,7 +81,7 @@ function App() {
         <li>General Artemio Ricarte Memorial School - (2008-2014)</li>
         </ul>
     </div>
-    <div className={`w-full max-w-2xl backdrop-blur-xl border rounded-2xl p-5 shadow-4xl transition-colors duration-300 ${isDarkMode ? 'bg-white/10 border-white/20' : 'bg-black/10 border-black/20'}`}>
+    <div className={`w-full max-w-3xl backdrop-blur-xl border rounded-2xl p-5 shadow-4xl transition-colors duration-300 ${isDarkMode ? 'bg-white/10 border-white/20' : 'bg-black/10 border-black/20'}`}>
       <h1 className={`text-2xl font-bold transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>About</h1>
         <p className={`w-full max-w-full mt-2 text-sm font-inter leading-5 text-justify transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-gray-800'}`}>
                 Im an aspiring UI/UX designer passionate about creating clean,
