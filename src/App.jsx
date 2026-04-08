@@ -19,10 +19,10 @@ function App() {
       <div className="mt-2 relative flex justify-between items-center w-full max-w-4xl transition-colors duration-300">
         <button 
           onClick={toggleTheme}
-          className={`absolute top-5 right-5 inline-flex items-center h-6 w-11 rounded-full transition-colors duration-300 p-0.5 ${isDarkMode ? 'bg-gray-700' : 'bg-gray-300'}`}
+          className={`absolute top-5 right-5 inline-flex items-center h-4 w-8 rounded-full transition-colors duration-300 p-0.5 ${isDarkMode ? 'bg-gray-700' : 'bg-gray-300'}`}
         >
           <span
-            className={`h-5 w-5 transform rounded-full bg-white transition-transform duration-300 ${isDarkMode ? 'translate-x-5' : 'translate-x-0'}`}
+            className={`h-3 w-3 transform rounded-full bg-white transition-transform duration-300 ${isDarkMode ? 'translate-x-4' : 'translate-x-0'}`}
           />
         </button>
         <div className="flex flex-row gap-4">
@@ -34,7 +34,7 @@ function App() {
 
       <div className="flex flex-col justify-center gap-1">
           
-        <h1 className={`tracking-widest flex items-start text-3xl font-inter font-bold text-left transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
+        <h1 className={`tracking-widest flex items-start text-4xl font-inter font-bold text-left transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
           <TypeAnimation
             sequence={["ROBERT MOLENO", 2000, "", 50]}
             speed={50}
@@ -71,9 +71,9 @@ function App() {
       </div>
     </div>
   </div>
-  <div className="flex flex-row items-stretch  gap-2  w-full max-w-4xl">
-  <div className={`w-1/3 max-w-xl backdrop-blur-xl border rounded-2xl p-5 shadow-4xl transition-colors duration-300 ${isDarkMode ? 'bg-white/10 border-white/20' : 'bg-white border-gray-200'}`}> 
-      <h1 className={`text-xl font-bold transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Education</h1>
+  <div className="flex flex-row items-start gap-2 w-full max-w-4xl">
+  <div className={`w-1/4 min-w-[240px] backdrop-blur-xl border rounded-2xl p-5 shadow-4xl transition-colors duration-300 ${isDarkMode ? 'bg-white/10 border-white/20' : 'bg-white border-gray-200'}`}> 
+      <h1 className={`text-2xl font-bold transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Education</h1>
       <ul className={` leading-5 list-disc text-xs font-inter pl-5 transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-gray-800'}`}>
         <li>Bachelor of Science in Information Technology - CVSU (2022-Present)</li>
         <li>Technical Vocational Computer Programming - LYFJSHS (2018-2020)</li>
@@ -81,7 +81,7 @@ function App() {
         <li>General Artemio Ricarte Memorial School - (2008-2014)</li>
         </ul>
     </div>
-    <div className={`  w-2/3 max-w-full backdrop-blur-xl border rounded-2xl p-5 shadow-4xl transition-colors duration-300 ${isDarkMode ? 'bg-white/10 border-white/20' : 'bg-white border-gray-200'}`}>
+    <div className={`flex-1 self-start backdrop-blur-xl border rounded-2xl p-5 shadow-4xl transition-colors duration-300 ${isDarkMode ? 'bg-white/10 border-white/20' : 'bg-white border-gray-200'}`}>
       <h1 className={`text-2xl font-bold transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>About</h1>
         <p className={`w-full max-w-full mt-2 text-sm font-inter leading-5 text-justify transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-gray-800'}`}>
                 Im an aspiring UI/UX designer passionate about creating clean,
