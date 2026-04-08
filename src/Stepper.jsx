@@ -1,23 +1,27 @@
 function Stepper({ steps, isDarkMode }) {
   return (
-    <div className="mt-1 overflow-x-auto pb-1">
-      <ol className="flex min-w-max items-start">
+    <div>
+      <h1 className={`text-2xl font-bold transition-colors duration-300 ${isDarkMode ? "text-white" : "text-gray-900"}`}>
+        Education
+      </h1>
+      <ol
+        className={`relative mt-4 space-y-3 before:absolute before:bottom-1 before:left-[3px] before:top-2 before:w-px before:rounded before:content-[''] ${
+          isDarkMode ? "before:bg-white/25" : "before:bg-gray-300"
+        }`}
+      >
         {steps.map((step, index) => (
-          <li key={`${step.title}-${step.year}`} className="flex items-start">
-            <div className="flex flex-col items-center pt-1">
-              <span className={`h-3 w-3 rounded-full ${isDarkMode ? "bg-white" : "bg-gray-900"}`} />
+          <li key={`${step.title}-${step.year}`} className="relative flex items-start gap-2">
+            <div className="relative z-10 flex h-4 w-[8px] items-start justify-center pt-1 leading-none">
+              <span className={`mt-px block h-1.5 w-1.5 rounded-full ${isDarkMode ? "bg-white" : "bg-gray-900"}`} />
             </div>
-            <div className="ml-2 w-44">
-              <p className={`text-xs font-semibold leading-4 ${isDarkMode ? "text-white" : "text-gray-900"}`}>
+            <div className="flex-1">
+              <p className={`text-sm font-semibold leading-5 ${isDarkMode ? "text-white" : "text-gray-900"}`}>
                 {step.title}
               </p>
-              <p className={`mt-1 text-[11px] ${isDarkMode ? "text-gray-300" : "text-gray-600"}`}>
+              <p className={`mt-1 text-xs tracking-wide ${isDarkMode ? "text-gray-300" : "text-gray-600"}`}>
                 {step.year}
               </p>
             </div>
-            {index < steps.length - 1 && (
-              <span className={`mx-3 mt-2 h-0.5 w-10 rounded ${isDarkMode ? "bg-white/50" : "bg-gray-400"}`} />
-            )}
           </li>
         ))}
       </ol>

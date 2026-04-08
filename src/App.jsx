@@ -11,10 +11,11 @@ import Stepper from "./Stepper";
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(true);
   const educationSteps = [
-    { title: "General Artemio Ricarte Memorial School", year: "2008-2014" },
-    { title: "Governor Ferrer Memorial National High School - Main", year: "2014-2018" },
-    { title: "Technical Vocational Computer Programming - LYFJSHS", year: "2018-2020" },
     { title: "Bachelor of Science in Information Technology - CVSU", year: "2022-Present" },
+    { title: "Technical Vocational Computer Programming - LYFJSHS", year: "2018-2020" },
+    { title: "Governor Ferrer Memorial National High School - Main", year: "2014-2018" },
+    { title: "General Artemio Ricarte Memorial School", year: "2008-2014" },
+    
   ];
 
   const toggleTheme = () => {
@@ -22,26 +23,26 @@ function App() {
   };
 
   return (
-    <div className={`m-auto gap-2 flex flex-col min-h-screen items-center justify-start transition-colors duration-300 ${isDarkMode ? 'bg-gradient-to-br from-black via-gray-800 to-gray-900' : 'bg-gradient-to-br from-white via-gray-50 to-gray-100'}`}>
-      <div className="mt-2 relative flex justify-between items-center w-full max-w-4xl transition-colors duration-300">
+    <div className={`m-auto flex min-h-screen w-full flex-col items-center justify-start gap-4 px-4 py-4 transition-colors duration-300 sm:px-6 ${isDarkMode ? 'bg-gradient-to-br from-black via-gray-800 to-gray-900' : 'bg-gradient-to-br from-white via-gray-50 to-gray-100'}`}>
+      <div className="relative flex w-full max-w-4xl justify-between transition-colors duration-300">
         <button 
           onClick={toggleTheme}
-          className={`absolute top-5 right-5 inline-flex items-center h-4 w-8 rounded-full transition-colors duration-300 p-0.5 ${isDarkMode ? 'bg-gray-700' : 'bg-gray-300'}`}
+          className={`absolute right-0 top-0 inline-flex h-5 w-10 items-center rounded-full p-0.5 transition-colors duration-300 sm:right-2 sm:top-2 ${isDarkMode ? 'bg-gray-700' : 'bg-gray-300'}`}
         >
           <span
-            className={`h-3 w-3 transform rounded-full bg-white transition-transform duration-300 ${isDarkMode ? 'translate-x-4' : 'translate-x-0'}`}
+            className={`h-4 w-4 transform rounded-full bg-white transition-transform duration-300 ${isDarkMode ? 'translate-x-5' : 'translate-x-0'}`}
           />
         </button>
-        <div className="flex flex-row gap-4">
+        <div className="flex w-full flex-col items-center gap-4 pt-8 text-center sm:flex-row sm:items-center sm:gap-5 sm:pt-0 sm:text-left">
           <img 
             src={profile} 
             alt="Profile" 
-            className="w-40 h-40 rounded-full object-cover"
+            className="h-32 w-32 rounded-full object-cover sm:h-40 sm:w-40"
           />
 
       <div className="flex flex-col justify-center gap-1">
           
-        <h1 className={`tracking-widest flex items-start text-4xl font-inter font-bold text-left transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
+        <h1 className={`flex items-start justify-center text-3xl font-inter font-bold tracking-[0.2em] transition-colors duration-300 sm:justify-start sm:text-4xl ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
           <TypeAnimation
             sequence={["ROBERT MOLENO", 2000, "", 50]}
             speed={50}
@@ -56,11 +57,11 @@ function App() {
       <p className={`text-sm font-inter font-md transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-gray-700'}`}>
           IT Student | UI/UX Designer 
         </p>
-        <div className="flex w-full gap-2 items-center">
-        <a href={cvPdf} download="MolenoCV.pdf" target="_blank" rel="noopener noreferrer" className={`text-xs font-inter font-semibold py-1 px-6 rounded-sm transition duration-300 ease-in-out transform hover:scale-105 ${isDarkMode ? 'bg-white text-gray-900 hover:bg-gray-100' : 'bg-black text-white hover:bg-gray-800'}`}>
+        <div className="flex w-full flex-col items-center gap-3 sm:flex-row sm:items-center">
+        <a href={cvPdf} download="MolenoCV.pdf" target="_blank" rel="noopener noreferrer" className={`text-xs font-inter font-semibold py-2 px-6 rounded-sm transition duration-300 ease-in-out transform hover:scale-105 ${isDarkMode ? 'bg-white text-gray-900 hover:bg-gray-100' : 'bg-black text-white hover:bg-gray-800'}`}>
           Download CV
         </a>
-        <div className="flex flex-row gap-1 justify-start">
+        <div className="flex flex-row justify-start gap-1">
           <a href="https://www.facebook.com/rmoleno15" target="_blank" rel="noopener noreferrer">
             <img src={fb} alt="Facebook" className={`w-5 h-5 transition duration-300 ease-in-out transform hover:scale-110 ${isDarkMode ? 'opacity-100' : 'invert'}`} />
           </a>
@@ -78,13 +79,13 @@ function App() {
       </div>
     </div>
   </div>
-      <div className="w-full max-w-4xl grid grid-cols-[240px_minmax(0,1fr)] gap-2">
+      <div className="grid w-full max-w-4xl gap-3 lg:grid-cols-[minmax(300px,0.95fr)_minmax(0,1.05fr)]">
         <div className={`row-span-2 backdrop-blur-xl border rounded-xl
           xl p-5 shadow-4xl transition-colors duration-300 ${isDarkMode ? 'bg-white/10 border-white/20' : 'bg-white border-gray-200'}`}>
-          <h1 className={`text-2xl font-bold transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Technical Stack</h1>
+          <Stepper steps={educationSteps} isDarkMode={isDarkMode} />
         </div>
 
-        <div className={`w-full backdrop-blur-xl border rounded-xl p-5 shadow-4xl transition-colors duration-300 ${isDarkMode ? 'bg-white/10 border-white/20' : 'bg-white border-gray-200'}`}>
+        <div className={`w-full backdrop-blur-xl border rounded-xl px-5 py-3 shadow-4xl transition-colors duration-300 ${isDarkMode ? 'bg-white/10 border-white/20' : 'bg-white border-gray-200'}`}>
           <h1 className={`text-2xl font-bold transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>About</h1>
           <p className={`w-full max-w-full mt-2 text-sm font-inter leading-5 text-justify transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-gray-800'}`}>
             Im an aspiring UI/UX designer passionate about creating clean,
@@ -97,8 +98,11 @@ function App() {
           </p>
         </div>
         <div className={`w-full backdrop-blur-xl border rounded-xl p-5 shadow-4xl transition-colors duration-300 ${isDarkMode ? 'bg-white/10 border-white/20' : 'bg-white border-gray-200'}`}>
-          <Stepper steps={educationSteps} isDarkMode={isDarkMode} />
+          <h1 className={`text-2xl font-bold transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Technical Stack</h1>
         </div>
+      </div>
+      <div className={`w-full max-w-4xl h-80 rounded-xl border p-5 shadow-4xl transition-colors duration-300 ${isDarkMode ? 'border-white/20 bg-white/10' : 'border-gray-200 bg-white'}`}>
+        <h1 className={`text-2xl font-bold transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Recent Projects</h1>
       </div>
 </div>
   );
