@@ -24,7 +24,7 @@ function App() {
 
   return (
     <div className={`m-auto flex min-h-screen w-full flex-col items-center justify-start gap-4 px-4 py-4 transition-colors duration-300 sm:px-6 ${isDarkMode ? 'bg-gradient-to-br from-black via-gray-800 to-gray-900' : 'bg-gradient-to-br from-white via-gray-50 to-gray-100'}`}>
-      <div className="relative flex w-full max-w-4xl justify-between transition-colors duration-300">
+      <div className="relative flex w-full max-w-5xl justify-between transition-colors duration-300">
         <button 
           onClick={toggleTheme}
           className={`absolute right-0 top-0 inline-flex h-5 w-10 items-center rounded-full p-0.5 transition-colors duration-300 sm:right-2 sm:top-2 ${isDarkMode ? 'bg-gray-700' : 'bg-gray-300'}`}
@@ -79,13 +79,13 @@ function App() {
       </div>
     </div>
   </div>
-      <div className="grid w-full max-w-4xl gap-3 lg:grid-cols-[minmax(300px,0.95fr)_minmax(0,1.05fr)]">
+      <div className="grid w-full max-w-5xl gap-1 lg:grid-cols-[minmax(300px,0.70fr)_minmax(0,1.05fr)]">
         <div className={`row-span-2 backdrop-blur-xl border rounded-xl
           xl p-5 shadow-4xl transition-colors duration-300 ${isDarkMode ? 'bg-white/10 border-white/20' : 'bg-white border-gray-200'}`}>
           <Stepper steps={educationSteps} isDarkMode={isDarkMode} />
         </div>
 
-        <div className={`w-full backdrop-blur-xl border rounded-xl px-5 py-3 shadow-4xl transition-colors duration-300 ${isDarkMode ? 'bg-white/10 border-white/20' : 'bg-white border-gray-200'}`}>
+        <div className={`w-full backdrop-blur-xl border rounded-md px-5 py-3 shadow-4xl transition-colors duration-300 ${isDarkMode ? 'bg-white/10 border-white/20' : 'bg-white border-gray-200'}`}>
           <h1 className={`text-2xl font-bold transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>About</h1>
           <p className={`w-full max-w-full mt-2 text-sm font-inter leading-5 text-justify transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-gray-800'}`}>
             Im an aspiring UI/UX designer passionate about creating clean,
@@ -97,11 +97,11 @@ function App() {
             experiences.
           </p>
         </div>
-        <div className={`w-full backdrop-blur-xl border rounded-xl p-5 shadow-4xl transition-colors duration-300 ${isDarkMode ? 'bg-white/10 border-white/20' : 'bg-white border-gray-200'}`}>
+        <div className={`w-full backdrop-blur-xl border rounded-xl p-3 shadow-4xl transition-colors duration-300 ${isDarkMode ? 'bg-white/10 border-white/20' : 'bg-white border-gray-200'}`}>
           <h1 className={`text-2xl font-bold transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Technical Stack</h1>
         </div>
       </div>
-      <div className={`w-full max-w-4xl h-80 rounded-xl border p-5 shadow-4xl transition-colors duration-300 ${isDarkMode ? 'border-white/20 bg-white/10' : 'border-gray-200 bg-white'}`}>
+      <div className={`w-full max-w-5xl  rounded-md border p-5 shadow-4xl transition-colors duration-300 ${isDarkMode ? 'border-white/20 bg-white/10' : 'border-gray-200 bg-white'}`}>
         <h1 className={`text-2xl font-bold transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Recent Projects</h1>
       </div>
 </div>
