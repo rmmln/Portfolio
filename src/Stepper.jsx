@@ -5,7 +5,7 @@ function Stepper({ steps, isDarkMode }) {
         Education
       </h1>
       <ol
-        className={`relative mt-4 space-y-3 before:absolute before:bottom-1 before:left-[3px] before:top-2 before:w-px before:rounded before:content-[''] ${
+        className={`relative mt-4 space-y-2 before:absolute before:bottom-0 before:left-[3px] before:top-2 before:w-px before:rounded before:content-[''] ${
           isDarkMode ? "before:bg-white/25" : "before:bg-gray-300"
         }`}
       >

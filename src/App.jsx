@@ -7,6 +7,19 @@ import linkedin from "./assets/linkedin.svg";
 import github from "./assets/github.svg";
 import location from "./assets/location.svg";
 import cvPdf from "./assets/MolenoCV.pdf";
+import htmlIcon  from "./assets/technicalstacks/html.svg";
+import cssIcon from "./assets/technicalstacks/css.svg";
+import tailwindIcon from "./assets/technicalstacks/tailwind.svg";
+import jsIcon from "./assets/technicalstacks/js.svg";
+import reactIcon from "./assets/technicalstacks/react.svg";
+import javaIcon from "./assets/technicalstacks/java.svg";
+import pythonIcon from "./assets/technicalstacks/python.svg";
+import djangoIcon from "./assets/technicalstacks/django.svg";
+import dockerIcon from "./assets/technicalstacks/docker.svg";
+import figmaIcon from "./assets/technicalstacks/figma.svg";
+import qtIcon from "./assets/technicalstacks/qtdesigner.svg";
+import gitIcon from "./assets/technicalstacks/git.svg";
+
 import Stepper from "./Stepper";
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(true);
@@ -24,7 +37,7 @@ function App() {
 
   return (
     <div className={`m-auto flex min-h-screen w-full flex-col items-center justify-start gap-4 px-4 py-4 transition-colors duration-300 sm:px-6 ${isDarkMode ? 'bg-gradient-to-br from-black via-gray-800 to-gray-900' : 'bg-gradient-to-br from-white via-gray-50 to-gray-100'}`}>
-      <div className="relative flex w-full max-w-5xl justify-between transition-colors duration-300">
+      <div className="relative flex w-full max-w-3xl justify-between transition-colors duration-300">
         <button 
           onClick={toggleTheme}
           className={`absolute right-0 top-0 inline-flex h-5 w-10 items-center rounded-full p-0.5 transition-colors duration-300 sm:right-2 sm:top-2 ${isDarkMode ? 'bg-gray-700' : 'bg-gray-300'}`}
@@ -79,9 +92,9 @@ function App() {
       </div>
     </div>
   </div>
-      <div className="grid w-full max-w-5xl gap-1 lg:grid-cols-[minmax(300px,0.70fr)_minmax(0,1.05fr)]">
-        <div className={`row-span-2 backdrop-blur-xl border rounded-xl
-          xl p-5 shadow-4xl transition-colors duration-300 ${isDarkMode ? 'bg-white/10 border-white/20' : 'bg-white border-gray-200'}`}>
+      <div className="grid w-full max-w-3xl gap-1 lg:grid-cols-[minmax(300px,0.80fr)_minmax(0,2.50fr)]">
+        <div className={`row-span-2 backdrop-blur-xl border rounded-md
+          xl p-3 shadow-4xl transition-colors duration-300 ${isDarkMode ? 'bg-white/10 border-white/20' : 'bg-white border-gray-200'}`}>
           <Stepper steps={educationSteps} isDarkMode={isDarkMode} />
         </div>
 
@@ -97,13 +110,27 @@ function App() {
             experiences.
           </p>
         </div>
-        <div className={`w-full backdrop-blur-xl border rounded-xl p-3 shadow-4xl transition-colors duration-300 ${isDarkMode ? 'bg-white/10 border-white/20' : 'bg-white border-gray-200'}`}>
+        <div className={`gap-1.5 flex-1 w-full backdrop-blur-xl border rounded-md p-3 shadow-4xl transition-colors duration-300 ${isDarkMode ? 'bg-white/10 border-white/20' : 'bg-white border-gray-200'}`}>
           <h1 className={`text-2xl font-bold transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Technical Stack</h1>
+          <div className="flex flex-row">
+          <img src={htmlIcon} alt="HTML" className="w-5 h-5 mt-2" title="HTML"/>
+          <img src={cssIcon} alt="CSS" className="w-5 h-5 mt-2" title="CSS"/>
+          <img src={tailwindIcon} alt="Tailwind CSS" className="w-5 h-5 mt-2" title="Tailwind CSS"/>
+          <img src={jsIcon} alt="JavaScript" className="w-5 h-5 mt-2" title="JavaScript"/>
+          <img src={reactIcon} alt="React" className="w-5 h-5 mt-2" title="React"/> 
+          <img src={javaIcon} alt="Java" className="w-5 h-5 mt-2" title="Java"/>
+          <img src={pythonIcon} alt="Python" className="w-5 h-5 mt-2" title="Python"/>
+          <img src={djangoIcon} alt="Django" className="w-5 h-5 mt-2" title="Django"/>
+          <img src={dockerIcon} alt="Docker" className="w-5 h-5 mt-2" title="Docker"/>
+          <img src={figmaIcon} alt="Figma" className="w-5 h-5 mt-2" title="Figma"/>
+          <img src={qtIcon} alt="Qt Designer" className="w-5 h-5 mt-2" title="Qt Designer"/>
+          <img src={gitIcon} alt="Git" className="w-5 h-5 mt-2" title="Git"/>
         </div>
       </div>
-      <div className={`w-full max-w-5xl  rounded-md border p-5 shadow-4xl transition-colors duration-300 ${isDarkMode ? 'border-white/20 bg-white/10' : 'border-gray-200 bg-white'}`}>
+      <div className={`flex mt-0 w-full max-w-5xl h-100 rounded-md border px-4 py-3 shadow-4xl transition-colors duration-300 ${isDarkMode ? 'border-white/20 bg-white/10' : 'border-gray-200 bg-white'}`}>
         <h1 className={`text-2xl font-bold transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Recent Projects</h1>
       </div>
+    </div>
 </div>
   );
 }

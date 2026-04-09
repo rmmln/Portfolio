@@ -1,1 +1,53 @@
 @import "tailwindcss";
+
+.puzzle-piece {
+  position: relative;
+  overflow: visible;
+  border-radius: 14px;
+}
+
+.puzzle-piece > * {
+  position: relative;
+  z-index: 2;
+}
+
+.puzzle-connector {
+  position: absolute;
+  z-index: 1;
+  height: 22px;
+  width: 22px;
+  border-radius: 9999px;
+  border: inherit;
+  background: inherit;
+  pointer-events: none;
+}
+
+.puzzle-connector--right {
+  top: 50%;
+  right: -11px;
+  transform: translateY(-50%);
+}
+
+.puzzle-connector--left {
+  top: 50%;
+  left: -11px;
+  transform: translateY(-50%);
+}
+
+.puzzle-connector--top {
+  top: -11px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.puzzle-connector--bottom {
+  bottom: -11px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media (max-width: 1023px) {
+  .puzzle-connector {
+    display: none;
+  }
+}
