@@ -98,9 +98,9 @@ function App() {
           <Stepper steps={educationSteps} isDarkMode={isDarkMode} />
         </div>
 
-        <div className={`w-full backdrop-blur-xl border rounded-md px-5 py-3 shadow-4xl transition-colors duration-300 ${isDarkMode ? 'bg-white/10 border-white/20' : 'bg-white border-gray-200'}`}>
-          <h1 className={`text-2xl font-bold transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>About</h1>
-          <p className={`w-full max-w-full mt-2 text-sm font-inter leading-5 text-justify transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-gray-800'}`}>
+        <div className={`w-full backdrop-blur-xl border rounded-md px-5 py-2 shadow-4xl transition-colors duration-300 ${isDarkMode ? 'bg-white/10 border-white/20' : 'bg-white border-gray-200'}`}>
+          <h1 className={`my-2 text-xl font-bold transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>ABOUT</h1>
+          <p className={`w-full max-w-full  text-md font-inter leading-5 text-justify transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-gray-800'}`}>
             Im an aspiring UI/UX designer passionate about creating clean,
             user-friendly, and visually engaging interfaces. I enjoy turning
             ideas into meaningful digital experiences and continuously
@@ -110,26 +110,28 @@ function App() {
             experiences.
           </p>
         </div>
-        <div className={`gap-1.5 flex-1 w-full backdrop-blur-xl border rounded-md p-3 shadow-4xl transition-colors duration-300 ${isDarkMode ? 'bg-white/10 border-white/20' : 'bg-white border-gray-200'}`}>
-          <h1 className={`text-2xl font-bold transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Technical Stack</h1>
-          <div className="flex flex-row">
-          <img src={htmlIcon} alt="HTML" className="w-5 h-5 mt-2" title="HTML"/>
-          <img src={cssIcon} alt="CSS" className="w-5 h-5 mt-2" title="CSS"/>
-          <img src={tailwindIcon} alt="Tailwind CSS" className="w-5 h-5 mt-2" title="Tailwind CSS"/>
-          <img src={jsIcon} alt="JavaScript" className="w-5 h-5 mt-2" title="JavaScript"/>
-          <img src={reactIcon} alt="React" className="w-5 h-5 mt-2" title="React"/> 
-          <img src={javaIcon} alt="Java" className="w-5 h-5 mt-2" title="Java"/>
-          <img src={pythonIcon} alt="Python" className="w-5 h-5 mt-2" title="Python"/>
-          <img src={djangoIcon} alt="Django" className="w-5 h-5 mt-2" title="Django"/>
-          <img src={dockerIcon} alt="Docker" className="w-5 h-5 mt-2" title="Docker"/>
-          <img src={figmaIcon} alt="Figma" className="w-5 h-5 mt-2" title="Figma"/>
-          <img src={qtIcon} alt="Qt Designer" className="w-5 h-5 mt-2" title="Qt Designer"/>
-          <img src={gitIcon} alt="Git" className="w-5 h-5 mt-2" title="Git"/>
+        <div className={` grid-cols-6 w-full backdrop-blur-xl border rounded-md p-3 shadow-4xl transition-colors duration-300 ${isDarkMode ? 'bg-white/10 border-white/20' : 'bg-white border-gray-200'}`}>
+          <h1 className={`text-xl font-bold transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>TECHNICAL STACK</h1>
+          <div className="row-span-2 mt-2 grid w-full grid-cols-6 gap-3 justify-items-center">
+          <img src={htmlIcon} alt="HTML" className="w-7 h-7 mt-2" title="HTML"/>
+          <img src={cssIcon} alt="CSS" className="w-7 h-7 mt-2" title="CSS"/>
+          <img src={tailwindIcon} alt="Tailwind CSS" className="w-7 h-7 mt-2" title="Tailwind CSS"/>
+          <img src={jsIcon} alt="JavaScript" className="w-7 h-7 mt-2" title="JavaScript"/>
+          <img src={reactIcon} alt="React" className="w-7 h-7 mt-2" title="React"/> 
+          <img src={javaIcon} alt="Java" className="w-7 h-7 mt-2" title="Java"/>
+          <img src={pythonIcon} alt="Python" className="w-7 h-7 mt-2" title="Python"/>
+          <img src={djangoIcon} alt="Django" className="w-7 h-7 mt-2" title="Django"/>
+          <img src={dockerIcon} alt="Docker" className="w-7 h-7 mt-2" title="Docker"/>
+          <img src={figmaIcon} alt="Figma" className="w-7 h-7 mt-2" title="Figma"/>
+          <img src={qtIcon} alt="Qt Designer" className="w-7 h-7 mt-2" title="Qt Designer"/>
+          <img src={gitIcon} alt="Git" className="w-7 h-7 mt-2" title="Git"/>
         </div>
       </div>
-      <div className={`flex mt-0 w-full max-w-5xl h-100 rounded-md border px-4 py-3 shadow-4xl transition-colors duration-300 ${isDarkMode ? 'border-white/20 bg-white/10' : 'border-gray-200 bg-white'}`}>
+      <div className={`mt-0 w-full lg:col-span-2 min-h-[320px] sm:min-h-[420px] rounded-md border px-4 py-3 shadow-4xl transition-colors duration-300 ${isDarkMode ? 'border-white/20 bg-white/10' : 'border-gray-200 bg-white'}`}>
         <h1 className={`text-2xl font-bold transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Recent Projects</h1>
       </div>
+      
+
     </div>
 </div>
   );
