@@ -112,7 +112,7 @@ function App() {
         </div>
         <div className={` grid-cols-6 w-full backdrop-blur-xl border rounded-md p-3 shadow-4xl transition-colors duration-300 ${isDarkMode ? 'bg-white/10 border-white/20' : 'bg-white border-gray-200'}`}>
           <h1 className={`text-xl font-bold transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>TECHNICAL STACK</h1>
-          <div className="row-span-2 mt-2 grid w-full grid-cols-6 gap-3 justify-items-center">
+          <div className="row-span-2 mt-2 grid w-full grid-cols-6 gap-1 justify-items-center">
           <img src={htmlIcon} alt="HTML" className="w-7 h-7 mt-2" title="HTML"/>
           <img src={cssIcon} alt="CSS" className="w-7 h-7 mt-2" title="CSS"/>
           <img src={tailwindIcon} alt="Tailwind CSS" className="w-7 h-7 mt-2" title="Tailwind CSS"/>
