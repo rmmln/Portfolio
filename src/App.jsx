@@ -127,13 +127,20 @@ function App() {
           <img src={gitIcon} alt="Git" className="w-7 h-7 mt-2" title="Git"/>
         </div>
       </div>
-      <div className={`mt-0 w-full lg:col-span-2 min-h-[320px] sm:min-h-[420px] rounded-md border px-4 py-3 shadow-4xl transition-colors duration-300 ${isDarkMode ? 'border-white/20 bg-white/10' : 'border-gray-200 bg-white'}`}>
-        <h1 className={`text-2xl font-bold transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Recent Projects</h1>
+        <div className={`mt-0 w-full lg:col-span-2 min-h-[320px] sm:min-h-[50px] rounded-md border px-4 py-3 shadow-4xl transition-colors duration-300 ${isDarkMode ? 'border-white/20 bg-white/10' : 'border-gray-200 bg-white'}`}>
+          <h1 className={`text-xl font-bold transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>RECENT PROJECTS</h1>
+          <div className="flex flex-row gap-3 mt-2 h-50">
+            <div className={`flex flex-col w-full backdrop-blur-xl border rounded-md px-5 py-2 shadow-4xl transition-colors duration-300 ${isDarkMode ? 'bg-white/10 border-white/20' : 'bg-white border-gray-200'}`}>
+            </div>
+            <div className={`flex flex-col w-full backdrop-blur-xl border rounded-md px-5 py-2 shadow-4xl transition-colors duration-300 ${isDarkMode ? 'bg-white/10 border-white/20' : 'bg-white border-gray-200'}`}>
+            </div>
+            <div className={`flex flex-col w-full backdrop-blur-xl border rounded-md px-5 py-2 shadow-4xl transition-colors duration-300 ${isDarkMode ? 'bg-white/10 border-white/20' : 'bg-white border-gray-200'}`}>
+            </div>
+          </div>
+        </div>
       </div>
-      
-
     </div>
-</div>
+
   );
 }
 
