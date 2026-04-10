@@ -1,0 +1,34 @@
+import htmlIcon from "../assets/technicalstacks/html.svg";
+import cssIcon from "../assets/technicalstacks/css.svg";
+import tailwindIcon from "../assets/technicalstacks/tailwind.svg";
+import jsIcon from "../assets/technicalstacks/js.svg";
+import reactIcon from "../assets/technicalstacks/react.svg";
+import javaIcon from "../assets/technicalstacks/java.svg";
+import pythonIcon from "../assets/technicalstacks/python.svg";
+import djangoIcon from "../assets/technicalstacks/django.svg";
+import dockerIcon from "../assets/technicalstacks/docker.svg";
+import figmaIcon from "../assets/technicalstacks/figma.svg";
+import qtIcon from "../assets/technicalstacks/qtdesigner.svg";
+import gitIcon from "../assets/technicalstacks/git.svg";
+
+export default function TechStackIcons({ isDarkMode }) {
+  return (
+    <div className={`grid-cols-6 w-full backdrop-blur-xl border rounded-md p-3 shadow-4xl transition-colors duration-300 ${isDarkMode ? 'bg-white/10 border-white/20' : 'bg-white border-gray-200'}`}>
+      <h1 className={`text-xl font-bold transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>TECHNICAL STACK</h1>
+      <div className="row-span-2 mt-2 grid w-full grid-cols-6 gap-1 justify-items-center">
+        <img src={htmlIcon} alt="HTML" className="w-7 h-7" title="HTML"/>
+        <img src={cssIcon} alt="CSS" className="w-7 h-7" title="CSS"/>
+        <img src={tailwindIcon} alt="Tailwind CSS" className="w-7 h-7" title="Tailwind CSS"/>
+        <img src={jsIcon} alt="JavaScript" className="w-7 h-7" title="JavaScript"/>
+        <img src={reactIcon} alt="React" className="w-7 h-7" title="React"/> 
+        <img src={javaIcon} alt="Java" className="w-7 h-7" title="Java"/>
+        <img src={pythonIcon} alt="Python" className="w-7 h-7" title="Python"/>
+        <img src={djangoIcon} alt="Django" className="w-7 h-7" title="Django"/>
+        <img src={dockerIcon} alt="Docker" className="w-7 h-7" title="Docker"/>
+        <img src={figmaIcon} alt="Figma" className="w-7 h-7" title="Figma"/>
+        <img src={qtIcon} alt="Qt Designer" className="w-7 h-7" title="Qt Designer"/>
+        <img src={gitIcon} alt="Git" className="w-7 h-7" title="Git"/>
+      </div>
+    </div>
+  );
+}
