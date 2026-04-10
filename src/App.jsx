@@ -1,15 +1,16 @@
 import { TypeAnimation } from "react-type-animation";
 import { useState } from "react";
 import profile from "./assets/profile.png";
-import fb from "./assets/fb.svg";
-import ig from "./assets/ig.svg";
-import linkedin from "./assets/linkedin.svg";
-import github from "./assets/github.svg";
-import location from "./assets/location.svg";
+import fb from "./assets/icons/fb.svg";
+import ig from "./assets/icons/ig.svg";
+import linkedin from "./assets/icons/linkedin.svg";
+import github from "./assets/icons/github.svg";
+import location from "./assets/icons/location.svg";
 import cvPdf from "./assets/MolenoCV.pdf";
 
 import Stepper from "./Stepper";
-import TechStackIcons from "./components/TechStackIcons";
+import TechStackIcons from "./components/ui/TechStackIcons";
+import RecentProjects from "./components/ui/RecentProjects";
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(true);
@@ -64,54 +65,46 @@ function App() {
         <a href={cvPdf} download="MolenoCV.pdf" target="_blank" rel="noopener noreferrer" className={`text-xs font-inter font-semibold py-2 px-6 rounded-sm transition duration-300 ease-in-out transform hover:scale-105 ${isDarkMode ? 'bg-white text-gray-900 hover:bg-gray-100' : 'bg-black text-white hover:bg-gray-800'}`}>
           Download CV
         </a>
-        <div className="flex flex-row justify-start gap-2">
-          <a href="https://www.facebook.com/rmoleno15" target="_blank" rel="noopener noreferrer" className="bg-white p-2 rounded-sm hover:shadow-lg transition-all duration-300 hover:scale-105">
-            <img src={fb} alt="Facebook" className="w-5 h-5" />
+        <div className="flex flex-row justify-start gap-1 bg-white rounded-sm p-1">
+          <a href="https://www.facebook.com/rmoleno15" target="_blank" rel="noopener noreferrer" className="hover:shadow-lg transition-all duration-300 hover:scale-105">
+            <img src={fb} alt="Facebook" className="w-6 h-6" />
           </a>
-          <a href="https://www.instagram.com/_rm.mndz" target="_blank" rel="noopener noreferrer" className="bg-white p-2 rounded-sm hover:shadow-lg transition-all duration-300 hover:scale-105">
-            <img src={ig} alt="Instagram" className="w-5 h-5" />
+          <a href="https://www.instagram.com/_rm.mndz" target="_blank" rel="noopener noreferrer" className="hover:shadow-lg transition-all duration-300 hover:scale-105">
+            <img src={ig} alt="Instagram" className="w-6 h-6" />
           </a>
-          <a href="https://www.linkedin.com/in/robert-moleno?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" className="bg-white p-2 rounded-sm hover:shadow-lg transition-all duration-300 hover:scale-105">    
-            <img src={linkedin} alt="LinkedIn" className="w-5 h-5" />
+          <a href="https://www.linkedin.com/in/robert-moleno?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" className="hover:shadow-lg transition-all duration-300 hover:scale-105">    
+            <img src={linkedin} alt="LinkedIn" className="w-6 h-6" />
           </a>
-          <a href="https://github.com/rmmln" target="_blank" rel="noopener noreferrer" className="bg-white p-2 rounded-sm hover:shadow-lg transition-all duration-300 hover:scale-105">
-            <img src={github} alt="GitHub" className="w-5 h-5" />
+          <a href="https://github.com/rmmln" target="_blank" rel="noopener noreferrer" className="hover:shadow-lg transition-all duration-300 hover:scale-105">
+            <img src={github} alt="GitHub" className="w-6 h-6" />
           </a>
           </div>
         </div>
       </div>
     </div>
   </div>
-      <div className="grid w-full max-w-3xl gap-1 lg:grid-cols-[minmax(300px,0.80fr)_minmax(0,2.50fr)]">
-        <div className={`row-span-2 backdrop-blur-xl border rounded-md
-          xl p-3 shadow-4xl transition-colors duration-300 ${isDarkMode ? 'bg-white/10 border-white/20' : 'bg-white border-gray-200'}`}>
-          <Stepper steps={educationSteps} isDarkMode={isDarkMode} />
-        </div>
-
-        <div className={`w-full backdrop-blur-xl border rounded-md px-5 py-2 shadow-4xl transition-colors duration-300 ${isDarkMode ? 'bg-white/10 border-white/20' : 'bg-white border-gray-200'}`}>
-          <h1 className={`my-2 text-xl font-bold transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>ABOUT</h1>
-          <p className={`w-full max-w-full  text-md font-inter leading-5 text-justify transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-gray-800'}`}>
-            Im an aspiring UI/UX designer passionate about creating clean,
-            user-friendly, and visually engaging interfaces. I enjoy turning
-            ideas into meaningful digital experiences and continuously
-            improving my skills in design and front-end development. Im
-            always eager to learn, improve my skills, and stay updated with
-            modern design trends to create better and more intuitive user
-            experiences.
-          </p>
-        </div>
-        <TechStackIcons isDarkMode={isDarkMode} />
-        <div className={`mt-0 w-full lg:col-span-2 min-h-[320px] sm:min-h-[50px] rounded-md border px-4 py-3 shadow-4xl transition-colors duration-300 ${isDarkMode ? 'border-white/20 bg-white/10' : 'border-gray-200 bg-white'}`}>
-          <h1 className={`text-xl font-bold transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>RECENT PROJECTS</h1>
-          <div className="flex flex-row gap-2 mt-2 h-50">
-            <div className={`flex flex-col w-full backdrop-blur-xl border rounded-md px-5 py-2 shadow-4xl transition-colors duration-300 ${isDarkMode ? 'bg-white/10 border-white/20' : 'bg-white border-gray-200'}`}>
-            </div>
-            <div className={`flex flex-col w-full backdrop-blur-xl border rounded-md px-5 py-2 shadow-4xl transition-colors duration-300 ${isDarkMode ? 'bg-white/10 border-white/20' : 'bg-white border-gray-200'}`}>
-            </div>
-            <div className={`flex flex-col w-full backdrop-blur-xl border rounded-md px-5 py-2 shadow-4xl transition-colors duration-300 ${isDarkMode ? 'bg-white/10 border-white/20' : 'bg-white border-gray-200'}`}>
-            </div>
+      <div className="w-full max-w-3xl">
+        <div className="grid w-full gap-2 lg:grid-cols-[minmax(300px,0.80fr)_minmax(0,2.50fr)]">
+          <div className={`row-span-2 backdrop-blur-xl border rounded-md
+            xl p-3 shadow-4xl transition-colors duration-300 ${isDarkMode ? 'bg-white/10 border-white/20' : 'bg-white border-gray-200'}`}>
+            <Stepper steps={educationSteps} isDarkMode={isDarkMode} />
           </div>
+
+          <div className={`w-full backdrop-blur-xl border rounded-md px-5 py-2 shadow-4xl transition-colors duration-300 ${isDarkMode ? 'bg-white/10 border-white/20' : 'bg-white border-gray-200'}`}>
+            <h1 className={`my-2 text-xl font-bold transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>ABOUT</h1>
+            <p className={`w-full max-w-full  text-md font-inter leading-5 text-justify transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-gray-800'}`}>
+              Im an aspiring UI/UX designer passionate about creating clean,
+              user-friendly, and visually engaging interfaces. I enjoy turning
+              ideas into meaningful digital experiences and continuously
+              improving my skills in design and front-end development. Im
+              always eager to learn, improve my skills, and stay updated with
+              modern design trends to create better and more intuitive user
+              experiences.
+            </p>
+          </div>
+          <TechStackIcons isDarkMode={isDarkMode} />
         </div>
+        <RecentProjects isDarkMode={isDarkMode} />
       </div>
     </div>
 
