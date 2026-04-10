@@ -10,13 +10,16 @@ function Stepper({ steps, isDarkMode }) {
         }`}
       >
         {steps.map((step, index) => (
-          <li key={`${step.title}-${step.year}`} className="relative flex items-start gap-2">
+          <li key={`${step.degree}-${step.year}`} className="relative flex items-start gap-2">
             <div className="relative z-10 flex h-6 w-[8px] items-start justify-center pt-1 leading-none">
               <span className={`mt-px block h-2 w-2 rounded-full ${isDarkMode ? "bg-white" : "bg-gray-900"}`} />
             </div>
             <div className="flex-1">
               <p className={`text-sm font-semibold leading-5 ${isDarkMode ? "text-white" : "text-gray-900"}`}>
-                {step.title}
+                {step.degree}
+              </p>
+              <p className={`mt-0.5 text-xs ${isDarkMode ? "text-gray-200" : "text-gray-700"}`}>
+                {step.school}
               </p>
               <p className={`mt-1 text-xs tracking-wide ${isDarkMode ? "text-gray-300" : "text-gray-600"}`}>
                 {step.year}
