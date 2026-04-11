@@ -3,30 +3,70 @@ import posxinventory from "../../assets/projects/posxinventory.jpeg";
 import coffeelogin from "../../assets/projects/logincoffee.jpeg";
 
 export default function RecentProjects({ isDarkMode }) {
+  const projects = [
+    {
+      title: "Petmate",
+      description: "Pet management dashboard with service tracking.",
+      img: desktopHome,
+    },
+    {
+      title: "POS X Inventory",
+      description: "Inventory management system with real-time updates.",
+      img: posxinventory,
+    },
+    {
+      title: "Coffee Login",
+      description: "Simple, elegant login UI/UX design for a local cafe.",
+      img: coffeelogin,
+    },
+  ];
+
+  const theme = {
+    container: isDarkMode ? 'bg-white/5 border-white/10' : 'bg-gray-50 border-gray-200',
+    card: isDarkMode ? 'bg-white/10 border-white/10 hover:bg-white/15' : 'bg-white border-gray-200 hover:shadow-lg',
+    textPrimary: isDarkMode ? 'text-white' : 'text-gray-900',
+    textSecondary: isDarkMode ? 'text-gray-400' : 'text-gray-600',
+  };
+
   return (
-    <div className={`flex flex-col w-full max-w-5xl backdrop-blur-xl border mt-2 rounded-md p-3 shadow-4xl transition-colors duration-300 ${isDarkMode ? 'bg-white/10 border-white/20' : 'bg-white border-gray-200'}`}>
-        <div className="flex flex-row justify-between items-center">
-            <h1 className={`text-xl font-bold transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>RECENT PROJECTS</h1>
-            <a className={`text-xs font-medium transition-colors duration-300 ${isDarkMode ? 'text-blue-400 hover:text-blue-300' : 'text-blue-600 hover:text-blue-700'}`} href="">
-                View All
-            </a>
-        </div>
-      <div className="flex flex-row gap-2 ">
-        <div className={`flex flex-col w-full backdrop-blur-xl border rounded-md px-2 py-2 shadow-4xl transition-colors duration-300 ${isDarkMode ? 'bg-white/10 border-white/20' : 'bg-white border-gray-200'}`}>
-          <img src={desktopHome} alt="Petmate Desktop Home" className="w-full h-auto rounded-md" />
-          <h3 className={`font-bold text-sm mt-2 transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Petmate</h3>
-        </div>
-        <div className={`flex flex-col w-full backdrop-blur-xl border rounded-md px-2 py-2 shadow-4xl transition-colors duration-300 ${isDarkMode ? 'bg-white/10 border-white/20' : 'bg-white border-gray-200'}`}>
-          <img src={posxinventory} alt="POS X Inventory" className="w-full h-auto rounded-md" />
-          <h3 className={`font-bold text-sm mt-2 transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>POS X Inventory</h3>
-        </div>
-        <div className={`flex flex-col w-full backdrop-blur-xl border rounded-md px-2 py-2 shadow-4xl transition-colors duration-300 ${isDarkMode ? 'bg-white/10 border-white/20' : 'bg-white border-gray-200'}`}>
-          <img src={coffeelogin} alt="Coffee Login" className="w-full h-auto rounded-md" />
-          <h3 className={`font-bold text-sm mt-2 transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Coffee Login</h3>
-          <p className={`text-xs font-inter mt-1 transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-gray-700'}`}>
-            I designed simple login for the Coffee shop project, a UI/UX Design.
-            </p>
-        </div>
+    <div className={`mt-2 w-full max-w-5xl border rounded-xl p-6 transition-all duration-300 ${theme.container}`}>
+      {/* Header */}
+      <div className="flex justify-between items-center mb-6">
+        <h2 className={`text-xl font-bold tracking-tight ${theme.textPrimary}`}>
+          RECENT PROJECTS
+        </h2>
+        <a href="#" className="text-sm font-semibold text-blue-500 hover:underline">
+          View All
+        </a>
+      </div>
+
+      {/* Projects Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        {projects.map((project, index) => (
+          <div 
+            key={index} 
+            className={`group flex flex-col border rounded-lg overflow-hidden transition-all duration-300 transform hover:-translate-y-1 ${theme.card}`}
+          >
+            {/* Image Wrapper */}
+            <div className="aspect-video overflow-hidden bg-gray-200">
+              <img 
+                src={project.img} 
+                alt={project.title} 
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+            </div>
+
+            {/* Content */}
+            <div className="p-4 flex flex-col flex-grow">
+              <h3 className={`font-bold text-base ${theme.textPrimary}`}>
+                {project.title}
+              </h3>
+              <p className={`text-xs mt-2 line-clamp-2 leading-relaxed ${theme.textSecondary}`}>
+                {project.description}
+              </p>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );
