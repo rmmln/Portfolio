@@ -26,6 +26,7 @@ function App() {
   };
 
   return (
+    
     <div className={`m-auto flex min-h-screen w-full flex-col items-center justify-start gap-4 px-4 py-4 transition-colors duration-300 sm:px-6 ${isDarkMode ? 'bg-gradient-to-br from-black via-gray-800 to-gray-900' : 'bg-gradient-to-br from-white via-gray-50 to-gray-100'}`}>
       <div className="relative flex w-full max-w-5xl justify-between transition-colors duration-300">
         <button 
