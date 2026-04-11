@@ -11,6 +11,7 @@ import cvPdf from "./assets/MolenoCV.pdf";
 import Stepper from "./Stepper";
 import TechStackIcons from "./components/ui/TechStackIcons";
 import RecentProjects from "./components/ui/RecentProjects";
+import Skills from "./components/ui/Skills";
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(true);
@@ -27,8 +28,8 @@ function App() {
 
   return (
     
-    <div className={`m-auto flex min-h-screen w-full flex-col items-center justify-start gap-4 px-4 py-4 transition-colors duration-300 sm:px-6 ${isDarkMode ? 'bg-gradient-to-br from-black via-gray-800 to-gray-900' : 'bg-gradient-to-br from-white via-gray-50 to-gray-100'}`}>
-      <div className="relative flex w-full max-w-5xl justify-between transition-colors duration-300">
+    <div className={`m-auto flex min-h-screen w-full flex-col items-center justify-start gap-3 px-4 py-4 transition-colors duration-300 sm:px-6 ${isDarkMode ? 'bg-gradient-to-br from-black via-gray-800 to-gray-900' : 'bg-gradient-to-br from-white via-gray-50 to-gray-100'}`}>
+      <div className="relative flex w-full max-w-4xl justify-between transition-colors duration-300">
         <button 
           onClick={toggleTheme}
           className={`absolute right-0 top-0 inline-flex h-5 w-10 items-center rounded-full p-0.5 transition-colors duration-300 sm:right-2 sm:top-2 ${isDarkMode ? 'bg-gray-700' : 'bg-gray-300'}`}
@@ -83,7 +84,7 @@ function App() {
       </div>
     </div>
   </div>
-      <div className="w-full max-w-5xl">
+      <div className="w-full max-w-4xl">
         <div className="grid w-full gap-2 lg:grid-cols-[minmax(300px,0.80fr)_minmax(0,2.50fr)]">
           <div className={`row-span-2 backdrop-blur-xl border rounded-md
             xl p-3 shadow-4xl transition-colors duration-300 ${isDarkMode ? 'bg-white/10 border-white/20' : 'bg-white border-gray-200'}`}>
@@ -103,10 +104,14 @@ function App() {
             </p>
           </div>
           <div className={`w-full backdrop-blur-xl border rounded-md px-5 py-2 shadow-4xl transition-colors duration-300 ${isDarkMode ? 'bg-white/10 border-white/20' : 'bg-white border-gray-200'}`}>
-            <h1 className={`my-2 text-xl font-bold transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>SKILLS</h1>
+            <h1 className={`my-2 text-xl font-bold transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>CERTIFICATIONS</h1>
           </div>
         </div>
+        <div className="flex flex-row w-full gap-2">
+
+        <Skills isDarkMode={isDarkMode} />
         <TechStackIcons isDarkMode={isDarkMode} />
+        </div>
         <RecentProjects isDarkMode={isDarkMode} />
       </div>
     </div>

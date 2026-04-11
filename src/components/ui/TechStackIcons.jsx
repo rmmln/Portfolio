@@ -14,7 +14,7 @@ import sqlIcon from "../../assets/technicalstacks/mysql.svg";
 
 export default function TechStackIcons({ isDarkMode }) {
   return (
-    <div className={`mt-2 grid-cols-5 w-full backdrop-blur-xl border rounded-md p-3 shadow-4xl transition-colors duration-300 ${isDarkMode ? 'bg-white/10 border-white/20' : 'bg-white border-gray-200'}`}>
+    <div className={`mt-2 w-full backdrop-blur-xl border rounded-md px-5 py-2 shadow-4xl transition-colors duration-300 ${isDarkMode ? 'bg-white/10 border-white/20' : 'bg-white border-gray-200'}`}>
       <div className="flex flex-row justify-between items-center">
       <h1 className={`text-xl font-bold transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>TECHNICAL STACK</h1>
       <a className={`text-xs font-medium transition-colors duration-300 ${isDarkMode ? 'text-blue-400 hover:text-blue-300' : 'text-blue-600 hover:text-blue-700'}`} href="">
