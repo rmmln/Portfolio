@@ -35,9 +35,9 @@ export default function RecentProjects({ isDarkMode }) {
         <h2 className={`text-xl font-bold tracking-tight ${theme.textPrimary}`}>
           RECENT PROJECTS
         </h2>
-        <a href="#" className="text-sm font-semibold text-blue-500 hover:underline">
-          View All
-        </a>
+       <a className={`text-xs font-medium transition-colors duration-300 ${isDarkMode ? 'text-blue-400 hover:text-blue-300' : 'text-blue-600 hover:text-blue-700'}`} href="">
+        View All
+      </a>
       </div>
 
       {/* Projects Grid */}
