@@ -1,72 +1,74 @@
+import React from "react";
+import { motion } from "framer-motion";
+
+// Assets
 import desktopHome from "../../assets/projects/DesktopPetmate.png";
 import posxinventory from "../../assets/projects/posxinventory.jpeg";
 import coffeelogin from "../../assets/projects/logincoffee.jpeg";
 
+const projects = [
+  { title: "Pet Information System", img: desktopHome, desc: "In our capstone, i created a pet management dashboard using Python." },
+  { title: "POS X Inventory System", img: posxinventory, desc: "I made a UI/UX design for the Point of Sales and Inventory system." },
+  { title: "Coffee Login Design", img: coffeelogin, desc: "I made a simple Coffee Login and homepage design using Figma and try prototyping." },
+];
+
+// Dinuplicate natin para pagdating sa gitna, yung dulo ay kamukha ng simula
+const loopedProjects = [...projects, ...projects];
+
 export default function RecentProjects({ isDarkMode }) {
-  const projects = [
-    {
-      title: "Petmate",
-      description: "Pet management dashboard with service tracking.",
-      img: desktopHome,
-    },
-    {
-      title: "POS X Inventory",
-      description: "Inventory management system with real-time updates.",
-      img: posxinventory,
-    },
-    {
-      title: "Coffee Login",
-      description: "Simple, elegant login UI/UX design for a local cafe.",
-      img: coffeelogin,
-    },
-  ];
-
-  const theme = {
-    container: isDarkMode ? 'bg-white/5 border-white/10' : 'bg-gray-50 border-gray-200',
-    card: isDarkMode ? 'bg-white/10 border-white/10 hover:bg-white/15' : 'bg-white border-gray-200 hover:shadow-lg',
-    textPrimary: isDarkMode ? 'text-white' : 'text-gray-900',
-    textSecondary: isDarkMode ? 'text-gray-400' : 'text-gray-600',
-  };
-
   return (
-    <div className={`mt-2 w-full max-w-5xl border rounded-xl p-6 transition-all duration-300 ${theme.container}`}>
-      {/* Header */}
-      <div className="flex justify-between items-center mb-6">
-        <h2 className={`text-xl font-bold tracking-tight ${theme.textPrimary}`}>
-          RECENT PROJECTS
-        </h2>
-        <a href="#" className="text-sm font-semibold text-blue-500 hover:underline">
-          View All
-        </a>
+    <div className={`mt-2 w-full max-w-5xl border rounded-xl p-6 overflow-hidden ${
+      isDarkMode ? 'bg-white/5 border-white/10 text-white' : 'bg-white border-gray-200 text-gray-900'
+    }`}>
+      
+      <div className="flex justify-between items-center mb-2 px-2">
+        <h2 className="text-md font-bold uppercase tracking-[0.2em]">Recent Projects</h2>
       </div>
 
-      {/* Projects Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        {projects.map((project, index) => (
-          <div 
-            key={index} 
-            className={`group flex flex-col border rounded-lg overflow-hidden transition-all duration-300 transform hover:-translate-y-1 ${theme.card}`}
-          >
-            {/* Image Wrapper */}
-            <div className="aspect-video overflow-hidden bg-gray-200">
-              <img 
-                src={project.img} 
-                alt={project.title} 
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-              />
-            </div>
+      <div className="relative w-full overflow-hidden">
+        {/* Ito yung gumagalaw na container */}
+        <motion.div 
+          className="flex gap-4 w-max" // w-max para hindi mag-wrap yung items pababa
+          animate={{ x: ["0%", "-50%"] }} 
+          transition={{ 
+            ease: "linear", 
+            duration: 20, // Bagalan natin para mas swabe tingnan
+            repeat: Infinity 
+          }}
+        >
+          {loopedProjects.map((project, index) => (
+            <div 
+              key={index} 
+              className={`w-[300px] md:w-[350px] flex-shrink-0 rounded-xl overflow-hidden border 
+                transition-all duration-500 ease-in-out hover:scale-105 
+                ${isDarkMode ? 'bg-zinc-900 border-white/10' : 'bg-gray-50 border-gray-200'}`}
+            >
+              {/* Image Container */}
+              <div className="aspect-video w-full overflow-hidden bg-zinc-900 flex items-center justify-center">
+                  <img 
+                    src={project.img} 
+                    alt={project.title}
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
 
-            {/* Content */}
-            <div className="p-4 flex flex-col flex-grow">
-              <h3 className={`font-bold text-base ${theme.textPrimary}`}>
-                {project.title}
-              </h3>
-              <p className={`text-xs mt-2 line-clamp-2 leading-relaxed ${theme.textSecondary}`}>
-                {project.description}
-              </p>
+              {/* Text Info */}
+              <div className="p-2">
+                <h3 className="font-bold text-sm uppercase">{project.title}</h3>
+                <p className="text-xs text-gray-500 mt-1">{project.desc}</p>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </motion.div>
+
+        {/* Shadow overlays para magmukhang pumapasok/lumalabas sa screen */}
+        <div className={`absolute inset-y-0 left-0 w-20 pointer-events-none z-10 bg-gradient-to-r ${
+          isDarkMode ? 'from-[#0f172a]' : 'from-white'
+        } to-transparent`} />
+        
+        <div className={`absolute inset-y-0 right-0 w-20 pointer-events-none z-10 bg-gradient-to-l ${
+          isDarkMode ? 'from-[#0f172a]' : 'from-white'
+        } to-transparent`} />
       </div>
     </div>
   );

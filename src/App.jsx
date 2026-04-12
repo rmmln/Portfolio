@@ -11,7 +11,7 @@ import cvPdf from "./assets/MolenoCV.pdf";
 import Stepper from "./Stepper";
 import TechStackIcons from "./components/ui/TechStackIcons";
 import RecentProjects from "./components/ui/RecentProjects";
-import Skills from "./components/ui/Skills";
+
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(true);
@@ -92,7 +92,7 @@ function App() {
           </div>
 
           <div className={`w-full backdrop-blur-xl border rounded-md px-5 py-2 shadow-4xl transition-colors duration-300 ${isDarkMode ? 'bg-white/10 border-white/20' : 'bg-white border-gray-200'}`}>
-            <h1 className={`my-2 text-xl font-bold transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>ABOUT</h1>
+            <h1 className={`my-2 text-md font-bold tracking-[0.2em] transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>ABOUT</h1>
             <p className={`w-full max-w-full  text-md font-inter leading-5 text-justify transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-gray-800'}`}>
               Im an aspiring UI/UX designer passionate about creating clean,
               user-friendly, and visually engaging interfaces. I enjoy turning
@@ -104,12 +104,12 @@ function App() {
             </p>
           </div>
           <div className={`w-full backdrop-blur-xl border rounded-md px-5 py-2 shadow-4xl transition-colors duration-300 ${isDarkMode ? 'bg-white/10 border-white/20' : 'bg-white border-gray-200'}`}>
-            <h1 className={`my-2 text-xl font-bold transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>CERTIFICATIONS</h1>
+            <h1 className={`my-2 text-md font-bold tracking-[0.2em] transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>CERTIFICATIONS</h1>
           </div>
         </div>
         <div className="flex flex-row w-full gap-2">
 
-        <Skills isDarkMode={isDarkMode} />
+        
         <TechStackIcons isDarkMode={isDarkMode} />
         </div>
         <RecentProjects isDarkMode={isDarkMode} />

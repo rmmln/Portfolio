@@ -1,7 +1,7 @@
 function Stepper({ steps, isDarkMode }) {
   return (
     <div>
-      <h1 className={`text-xl font-bold transition-colors duration-300 ${isDarkMode ? "text-white" : "text-gray-900"}`}>
+      <h1 className={`text-md font-bold tracking-[0.2em] transition-colors duration-300 ${isDarkMode ? "text-white" : "text-gray-900"}`}>
         EDUCATION
       </h1>
       <ol
