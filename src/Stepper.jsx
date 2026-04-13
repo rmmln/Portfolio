@@ -5,23 +5,23 @@ function Stepper({ steps, isDarkMode }) {
         EDUCATION
       </h1>
       <ol
-        className={`relative mt-2 space-y-2 before:absolute before:bottom-0 before:left-[3px] before:top-2 before:w-px before:rounded before:content-[''] ${
+        className={`relative mt-1 space-y-2 before:absolute before:bottom-0 before:left-[3px] before:top-2 before:w-px before:rounded before:content-[''] ${
           isDarkMode ? "before:bg-white/25" : "before:bg-gray-300"
         }`}
       >
         {steps.map((step, index) => (
-          <li key={`${step.degree}-${step.year}`} className="relative flex items-start gap-2">
-            <div className="relative z-10 flex h-6 w-[8px] items-start justify-center pt-1 leading-none">
+          <li key={`${step.degree}-${step.year}`} className="relative flex items-start gap-2 mt-5">
+            <div className="relative z-10 flex h-6 w-[8px] items-start justify-center pt-1 leading-5">
               <span className={`mt-px block h-2 w-2 rounded-full ${isDarkMode ? "bg-white" : "bg-gray-900"}`} />
             </div>
             <div className="flex-1">
-              <p className={`text-sm font-semibold leading-5 ${isDarkMode ? "text-white" : "text-gray-900"}`}>
+              <p className={`text-md font-semibold leading-5 ${isDarkMode ? "text-white" : "text-gray-900"}`}>
                 {step.degree}
               </p>
-              <p className={`mt-0.5 text-xs ${isDarkMode ? "text-gray-200" : "text-gray-700"}`}>
+              <p className={`mt-1 text-sm ${isDarkMode ? "text-gray-200" : "text-gray-700"}`}>
                 {step.school}
               </p>
-              <p className={`mt-1 text-xs tracking-wide ${isDarkMode ? "text-gray-300" : "text-gray-600"}`}>
+              <p className={`mt-1 text-xs tracking-wide ${isDarkMode ? "text-gray-200" : "text-gray-600"}`}>
                 {step.year}
               </p>
             </div>
