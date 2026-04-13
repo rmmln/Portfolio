@@ -15,7 +15,7 @@ export default function TechStackIcons({ isDarkMode }) {
   ];
 
   return (
-    <div className={`mt-2 w-full backdrop-blur-xl border rounded-xl px-6 py-6 transition-all duration-300 ${
+    <div className={`mt-2 w-full max-w-3xl backdrop-blur-xl border rounded-xl px-6 py-6 transition-all duration-300 ${
       isDarkMode ? 'bg-white/5 border-white/10' : 'bg-white border-gray-100 shadow-sm'
     }`}>
       

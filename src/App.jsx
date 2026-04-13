@@ -30,7 +30,7 @@ function App() {
   return (
     
     <div className={`m-auto flex min-h-screen w-full flex-col items-center justify-start gap-3 px-4 py-4 transition-colors duration-300 sm:px-6 ${isDarkMode ? 'bg-gradient-to-br from-black via-gray-800 to-gray-900' : 'bg-gradient-to-br from-white via-gray-50 to-gray-100'}`}>
-      <div className="relative flex w-full max-w-4xl justify-between transition-colors duration-300">
+      <div className="relative flex w-full max-w-3xl justify-between transition-colors duration-300">
         <button 
           onClick={toggleTheme}
           className={`absolute right-0 top-0 inline-flex h-5 w-10 items-center rounded-full p-0.5 transition-colors duration-300 sm:right-2 sm:top-2 ${isDarkMode ? 'bg-gray-700' : 'bg-gray-300'}`}
@@ -85,7 +85,7 @@ function App() {
       </div>
     </div>
   </div>
-      <div className="w-full max-w-4xl">
+      <div className="w-full max-w-3xl">
         <div className="grid w-full gap-2 lg:grid-cols-[minmax(300px,0.40fr)_minmax(0,0.6fr)]">
           <div className={`row-span-2 backdrop-blur-xl border rounded-md
             xl p-3 shadow-4xl transition-colors duration-300 ${isDarkMode ? 'bg-white/10 border-white/20' : 'bg-white border-gray-200'}`}>
@@ -94,7 +94,7 @@ function App() {
 
           <div className={`w-full backdrop-blur-xl border rounded-md px-5 shadow-4xl transition-colors duration-300 ${isDarkMode ? 'bg-white/10 border-white/20' : 'bg-white border-gray-200'}`}>
             <h1 className={`my-2 text-md font-bold tracking-[0.2em] transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>ABOUT</h1>
-            <p className={`w-full max-w-full pb-4 text-md font-inter leading-5 text-justify transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-gray-800'}`}>
+            <p className={`w-full max-w-3xl pb-4 text-md font-inter leading-5 text-justify transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-gray-800'}`}>
               Im an aspiring UI/UX designer passionate about creating clean,
               user-friendly, and visually engaging interfaces. I enjoy turning
               ideas into meaningful digital experiences and continuously
