@@ -2,6 +2,7 @@ export default function Certificates({ isDarkMode }) {
   const certifications = [
     { title: "Hackathon 2025 (Java Language)" },
     { title: "LinkedIT Webinar on Agile & Scrum (2024)" },
+    { title: "Dean’s Lister - First Semester, A.Y 2023-2024 (1.48)"}
   ];
 
   return (
