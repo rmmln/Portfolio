@@ -1,6 +1,4 @@
 export default function Certificates({ isDarkMode }) {
-  
-  
   const certifications = [
     { title: "Hackathon 2025 (Java Language)" },
     { title: "LinkedIT Webinar on Agile & Scrum (2024)" },
@@ -8,7 +6,7 @@ export default function Certificates({ isDarkMode }) {
   ];
 
   return (
-    <div className={`w-full h-full backdrop-blur-xl border rounded-md p-3 shadow-4xl transition-all duration-300 ${
+    <div className={`w-full h-full backdrop-blur-xl border rounded-md p-5 shadow-4xl transition-all duration-300 ${
       isDarkMode ? 'bg-white/10 border-white/20' : 'bg-white border-gray-200'
     }`}>
       {/* Header na kapareho ng format sa Skills */}
