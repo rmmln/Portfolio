@@ -15,7 +15,7 @@ export default function TechStackIcons({ isDarkMode }) {
   ];
 
   return (
-    <div className={`mt-2 w-full backdrop-blur-xl border rounded-xl px-6 py-6 transition-all duration-300 ${
+    <div className={`mt-2 w-full max-w-3xl backdrop-blur-xl border rounded-xl px-6 py-6 transition-all duration-300 ${
       isDarkMode ? 'bg-white/5 border-white/10' : 'bg-white border-gray-100 shadow-sm'
     }`}>
       
@@ -40,9 +40,9 @@ export default function TechStackIcons({ isDarkMode }) {
               {group.skills.map((skill, i) => (
                 <span
                   key={i}
-                  className={`px-3 py-1 text-sm font-medium font-inter rounded-full border transition-all duration-300 ${
+                  className={`px-3 py-1 text-sm font-medium rounded-full border transition-all duration-300 ${
                     isDarkMode 
-                      ? 'bg-zinc-800/50 border-white/5 text-gray-300 hover:border-blue-500/50 hover:text-white' 
+                      ? 'bg-zinc-800/50 border-white/5 text-zinc-400 hover:border-blue-500/50 hover:text-white' 
                       : 'bg-gray-50 border-gray-200 text-gray-600 hover:bg-white hover:shadow-md hover:text-blue-600'
                   }`}
                 >

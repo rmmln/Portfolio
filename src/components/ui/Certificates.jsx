@@ -20,10 +20,10 @@ export default function Certificates({ isDarkMode }) {
           <div
             key={index}
             className={`px-3  rounded-full border transition-all duration-300 hover:scale-105 cursor-default ${
-              isDarkMode 
-                      ? 'bg-zinc-800/50 border-white/5 text-gray-300 hover:border-blue-500/50 hover:text-white' 
-                      : 'bg-gray-50 border-gray-200 text-gray-600 hover:bg-white hover:shadow-md hover:text-blue-600'
-                  }`}
+              isDarkMode
+                ? 'bg-zinc-800/50 border-white/5 text-zinc-200 hover:border-blue-500/50 hover:text-white'
+                : 'bg-gray-50 border-gray-200 text-gray-600 hover:bg-white hover:shadow-md hover:text-blue-600'
+            }`}
           >
             {/* Same font size and style as your Tech Stack pills */}
             <p className="text-sm font-medium font-inter">
