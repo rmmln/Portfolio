@@ -61,7 +61,7 @@ function App() {
           Cavite, Philippines
         </p>
       <p className={`text-sm font-inter font-md transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-gray-700'}`}>
-          Pokemon Slayer | UI/UX Designer | Foot Enthusiast
+          IT Student | UI/UX Designer | Foot Enthusiast
         </p>
         <div className="flex w-full flex-col items-center gap-3 sm:flex-row sm:items-center">
         <a href={cvPdf} download="MolenoCV.pdf" target="_blank" rel="noopener noreferrer" className={`text-xs font-inter font-semibold py-2 px-6 rounded-sm transition duration-300 ease-in-out transform hover:scale-105 ${isDarkMode ? 'bg-white text-gray-900 hover:bg-gray-100' : 'bg-black text-white hover:bg-gray-800'}`}>
