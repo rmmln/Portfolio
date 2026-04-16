@@ -8,7 +8,7 @@ import github from "./assets/icons/github.svg";
 import location from "./assets/icons/location.svg";
 import cvPdf from "./assets/MolenoCV.pdf";
 
-import Stepper from "./Stepper";
+import Education from "./Education";
 import TechStackIcons from "./components/ui/TechStack";
 import RecentProjects from "./components/ui/RecentProjects";
 import Certificates from "./components/ui/Certificates";
@@ -89,7 +89,7 @@ function App() {
         <div className="grid w-full gap-2 lg:grid-cols-[minmax(300px,0.40fr)_minmax(0,0.6fr)]">
           <div className={`row-span-2 backdrop-blur-xl border rounded-md
             xl p-3 shadow-4xl transition-colors duration-300 ${isDarkMode ? 'bg-white/10 border-white/20' : 'bg-white border-gray-200'}`}>
-            <Stepper steps={educationSteps} isDarkMode={isDarkMode} />
+            <Education steps={educationSteps} isDarkMode={isDarkMode} />
           </div>
 
           <div className={`w-full backdrop-blur-xl border rounded-md px-5 shadow-4xl transition-colors duration-300 ${isDarkMode ? 'bg-white/10 border-white/20' : 'bg-white border-gray-200'}`}>
