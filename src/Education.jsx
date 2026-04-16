@@ -14,14 +14,14 @@ function Stepper({ steps, isDarkMode }) {
             <div className="relative z-10 flex h-6 w-[8px] items-start justify-center pt-1 leading-none">
               <span className={`mt-px block h-2 w-2 rounded-full ${isDarkMode ? "bg-white" : "bg-gray-900"}`} />
             </div>
-            <div className="flex-1">
-              <p className={`text-sm font-semibold leading-5 ${isDarkMode ? "text-white" : "text-gray-900"}`}>
+            <div className="flex-1 mt-2">
+              <p className={`text-medium font-semibold leading-5 ${isDarkMode ? "text-white" : "text-gray-900"}`}>
                 {step.degree}
               </p>
-              <p className={`mt-0.5 text-xs ${isDarkMode ? "text-gray-200" : "text-gray-700"}`}>
+              <p className={`text-sm ${isDarkMode ? "text-gray-200" : "text-gray-700"}`}>
                 {step.school}
               </p>
-              <p className={`mt-1 text-xs tracking-wide ${isDarkMode ? "text-gray-300" : "text-gray-600"}`}>
+              <p className={`text-xs tracking-wide ${isDarkMode ? "text-gray-300" : "text-gray-600"}`}>
                 {step.year}
               </p>
             </div>
