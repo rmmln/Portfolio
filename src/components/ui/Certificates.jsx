@@ -4,7 +4,7 @@ export default function Certificates({ isDarkMode }) {
     { title: "LinkedIT Webinar on Agile & Scrum (2024)" },
     { title: "Dean’s Lister - First Semester, A.Y 2023-2024 (1.48)" }
   ];
-
+ 
   return (
     <div className={`w-full h-full backdrop-blur-xl border rounded-md p-5 shadow-4xl transition-all duration-300 ${
       isDarkMode ? 'bg-white/10 border-white/20' : 'bg-white border-gray-200'
