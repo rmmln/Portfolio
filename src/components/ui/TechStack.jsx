@@ -6,7 +6,7 @@ export default function TechStackIcons({ isDarkMode }) {
     },
     {
       category: "Design & UI/UX",
-      skills: ["Figma", "Qt Designer", "Tailwind CSS", "Canva", "Visual Studio"]
+      skills: ["Figma", "Qt Designer", "Tailwind CSS", "Canva",]
     },
     {
       category: "Hardware & Technical",
