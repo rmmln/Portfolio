@@ -42,7 +42,7 @@ export default function TechStackIcons({ isDarkMode }) {
                   key={i}
                   className={`px-3 py-1 text-sm font-medium rounded-full border transition-all duration-300 ${
                     isDarkMode 
-                      ? 'bg-zinc-800/50 border-white/5 text-zinc-400 hover:border-blue-500/50 hover:text-white' 
+                      ? 'bg-zinc-800/50 border-white/5 text-gray-300 hover:border-blue-500/50 hover:text-white' 
                       : 'bg-gray-50 border-gray-200 text-gray-600 hover:bg-white hover:shadow-md hover:text-blue-600'
                   }`}
                 >
