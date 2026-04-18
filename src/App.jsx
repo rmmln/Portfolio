@@ -48,7 +48,7 @@ function App() {
 
       <div className="flex flex-col justify-center gap-1">
           
-        <h1 className={`flex items-start justify-center text-3xl font-inter font-bold tracking-[0.2em] transition-colors duration-300 sm:justify-start sm:text-4xl ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
+        <h1 className={`flex items-start justify-center text-3xl font-inter font-bold tracking-wide transition-colors duration-300 sm:justify-start sm:text-4xl ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
           <TypeAnimation
             sequence={["ROBERT MOLENO", 2000, "", 50]}
             speed={50}
