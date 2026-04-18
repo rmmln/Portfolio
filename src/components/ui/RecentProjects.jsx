@@ -15,14 +15,11 @@ import ssPullout from "../../assets/projects/posxinventory/pulloutPage.png";
 import ssDeliveries from "../../assets/projects/posxinventory/deliveriesPage.png";
 import ssHistory from "../../assets/projects/posxinventory/historyPage.png";
 
-
-//Pet Information Screenshots
+// Pet screenshots
 import ssHome from "../../assets/projects/petinfosys/petHome.png";
 import ssProfile from "../../assets/projects/petinfosys/petProfile.png";
 import ssRecords from "../../assets/projects/petinfosys/petRecords.png";
-import ssAppoinments from "../../assets/projects/petinfosys/petAppointment.png";
-
-
+import ssAppointments from "../../assets/projects/petinfosys/petAppointment.png";
 
 const projects = [
   {
@@ -33,7 +30,7 @@ const projects = [
       { img: ssHome, desc: "Main dashboard overview." },
       { img: ssProfile, desc: "Detailed pet profile page." },
       { img: ssRecords, desc: "Medical records management." },
-      { img: ssAppoinments, desc: "Appointment scheduling interface." },
+      { img: ssAppointments, desc: "Appointment scheduling interface." },
     ],
   },
   {
@@ -58,10 +55,9 @@ const projects = [
   },
 ];
 
-// infinite scroll
 const loopedProjects = [...projects, ...projects];
 
-export default function RecentProjects() {
+export default function RecentProjects({ isDarkMode }) {
   const [open, setOpen] = useState(false);
   const [activeProject, setActiveProject] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -82,8 +78,14 @@ export default function RecentProjects() {
 
   return (
     <>
-      {/* PROJECT CAROUSEL */}
-      <div className="mt-2 w-full max-w-5xl border rounded-xl p-6 overflow-hidden bg-white/5 border-white/10 text-white">
+      {/* MAIN */}
+      <div
+        className={`mt-2 w-full max-w-5xl border rounded-xl p-6 overflow-hidden ${
+          isDarkMode
+            ? "bg-white/5 border-white/10 text-white"
+            : "bg-white border-gray-200 text-gray-900"
+        }`}
+      >
         <h2 className="text-md font-bold uppercase tracking-[0.2em] mb-4">
           Recent Projects
         </h2>
@@ -102,14 +104,18 @@ export default function RecentProjects() {
                   setCurrentIndex(0);
                   setOpen(true);
                 }}
-                className="w-[300px] flex-shrink-0 rounded-xl overflow-hidden bg-zinc-900 cursor-pointer hover:scale-105 transition"
+                className={`w-[300px] flex-shrink-0 rounded-xl overflow-hidden cursor-pointer hover:scale-105 transition ${
+                  isDarkMode ? "bg-zinc-900" : "bg-gray-100"
+                }`}
               >
                 <img
                   src={project.img}
                   className="w-full h-[180px] object-cover"
                 />
                 <div className="p-2">
-                  <h3 className="font-bold text-sm">{project.title}</h3>
+                  <h3 className="font-bold text-sm">
+                    {project.title}
+                  </h3>
                 </div>
               </div>
             ))}
@@ -117,11 +123,16 @@ export default function RecentProjects() {
         </div>
       </div>
 
-      {/* MODAL CAROUSEL */}
+      {/* MODAL */}
       {open && (
         <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-4">
-          <div className="bg-zinc-900 rounded-xl max-w-5xl w-full p-6 text-white relative">
-
+          <div
+            className={`rounded-xl max-w-5xl w-full p-6 relative ${
+              isDarkMode
+                ? "bg-zinc-900 text-white"
+                : "bg-white text-gray-900"
+            }`}
+          >
             {/* CLOSE */}
             <button
               onClick={() => setOpen(false)}
@@ -138,7 +149,6 @@ export default function RecentProjects() {
             {/* CAROUSEL */}
             <div className="relative w-full h-[450px] flex flex-col items-center justify-center">
 
-              {/* IMAGE */}
               <div className="w-full h-full flex items-center justify-center">
                 <img
                   src={screenshots[currentIndex]?.img}
@@ -146,8 +156,11 @@ export default function RecentProjects() {
                 />
               </div>
 
-              {/* DESCRIPTION */}
-              <p className="mt-4 text-sm text-gray-300 text-center">
+              <p
+                className={`mt-4 text-sm text-center ${
+                  isDarkMode ? "text-gray-300" : "text-gray-600"
+                }`}
+              >
                 {screenshots[currentIndex]?.desc}
               </p>
 

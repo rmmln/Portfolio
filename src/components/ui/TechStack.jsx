@@ -6,7 +6,7 @@ export default function TechStackIcons({ isDarkMode }) {
     },
     {
       category: "Design & UI/UX",
-      skills: ["Figma", "Qt Designer", "Tailwind CSS", "Canva",]
+      skills: ["Figma", "Canva", "Tailwind CSS", "QT Designer",]
     },
     {
       category: "Hardware & Technical",
@@ -20,7 +20,7 @@ export default function TechStackIcons({ isDarkMode }) {
     }`}>
       
       <div className="flex justify-between items-center mb-4">
-        <h2 className={`text-md font-black tracking-[0.2em] uppercase ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
+        <h2 className={`text-md font-bold tracking-[0.2em] uppercase ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
           Skills & Expertise
         </h2>
       </div>
