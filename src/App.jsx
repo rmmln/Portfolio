@@ -94,7 +94,7 @@ function App() {
 
           <div className={`w-full backdrop-blur-xl border rounded-md px-5 shadow-4xl transition-colors duration-300 ${isDarkMode ? 'bg-white/10 border-white/20' : 'bg-white border-gray-200'}`}>
             <h1 className={`my-2 text-md font-bold tracking-[0.2em] transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>ABOUT</h1>
-            <p className={`w-full max-w-3xl pb-4 text-md font-inter leading-4 text-justify transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-gray-800'}`}>
+            <p className={`w-full max-w-3xl pb-3 text-md font-inter leading-4 text-justify transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-gray-800'}`}>
               I am an aspiring UI/UX designer passionate about creating clean,
               user-friendly, and visually engaging interfaces. I enjoy turning
               ideas into meaningful digital experiences and continuously

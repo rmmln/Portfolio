@@ -11,7 +11,7 @@ function Stepper({ steps, isDarkMode }) {
       >
         {steps.map((step, index) => (
           <li key={`${step.degree}-${step.year}`} className="relative flex items-start gap-2">
-            <div className="relative z-10 flex h-6 w-[8px] items-start justify-center pt-1 leading-none">
+            <div className="relative z-9 flex h-6 w-[8px] items-center justify-center  leading-none">
               <span className={`mt-px block h-2 w-2 rounded-full ${isDarkMode ? "bg-white" : "bg-gray-900"}`} />
             </div>
             <div className="flex-1 mt-2">
