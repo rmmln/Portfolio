@@ -47,14 +47,17 @@ function App() {
           />
 
       <div className="flex flex-col justify-center gap-1">
-          
-        <h1 className={`flex items-start justify-center text-3xl font-inter font-bold tracking-wide transition-colors duration-300 sm:justify-start sm:text-4xl ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
-          <TypeAnimation
-            sequence={["ROBERT MOLENO", 2000, "", 50]}
-            speed={50}
-            repeat={Infinity}
-            cursor={true}
-          />
+        <h1 className={`flex items-start justify-center text-3xl font-inter font-bold tracking-wide transition-colors duration-300 sm:justify-start sm:text-4xl ${
+        isDarkMode ? "text-white" : "text-gray-900"
+          }`}>
+          <span className="inline-block w-[350px]">
+            <TypeAnimation
+              sequence={["ROBERT MOLENO", 2000, "", 50]}
+              speed={50}
+              repeat={Infinity}
+              cursor={true}
+            />
+          </span>
         </h1>
         <p className={`text-xs font-inter font-md transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-gray-700'}`}>
           <img src={location} alt="Location" className={`w-4 h-4 inline-block transition-all duration-300 ${isDarkMode ? 'opacity-100' : 'brightness-0'}`} />
@@ -63,23 +66,23 @@ function App() {
       <p className={`text-sm font-inter font-md transition-colors duration-300 ${isDarkMode ? 'text-white' : 'text-gray-700'}`}>
           IT Student | UI/UX Designer 
         </p>
-        <div className="flex w-full flex-col items-center gap-3 sm:flex-row sm:items-center">
-        <a href={cvPdf} download="MolenoCV.pdf" target="_blank" rel="noopener noreferrer" className={`text-xs font-inter font-semibold py-2 px-6 rounded-sm transition duration-300 ease-in-out transform hover:scale-105 ${isDarkMode ? 'bg-white text-gray-900 hover:bg-gray-100' : 'bg-black text-white hover:bg-gray-800'}`}>
-          Download CV
-        </a>
-        <div className="flex flex-row justify-start gap-1 bg-white rounded-sm p-1">
-          <a href="https://www.facebook.com/rmoleno15" target="_blank" rel="noopener noreferrer" className="hover:shadow-lg transition-all duration-300 hover:scale-105">
-            <img src={fb} alt="Facebook" className="w-6 h-6" />
+        <div className="flex w-full flex-row items-center justify-center gap-3 sm:flex-row sm:items-center sm:justify-start">
+          <a href={cvPdf} download="MolenoCV.pdf" target="_blank" rel="noopener noreferrer" className={`text-xs font-inter font-semibold py-2 px-6 rounded-sm transition duration-300 ease-in-out transform hover:scale-105 ${isDarkMode ? 'bg-white text-gray-900 hover:bg-gray-100' : 'bg-black text-white hover:bg-gray-800'}`}>
+            Download CV
           </a>
-          <a href="https://www.instagram.com/_rm.mndz" target="_blank" rel="noopener noreferrer" className="hover:shadow-lg transition-all duration-300 hover:scale-105">
-            <img src={ig} alt="Instagram" className="w-6 h-6" />
-          </a>
-          <a href="https://www.linkedin.com/in/robert-moleno?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" className="hover:shadow-lg transition-all duration-300 hover:scale-105">    
-            <img src={linkedin} alt="LinkedIn" className="w-6 h-6" />
-          </a>
-          <a href="https://github.com/rmmln" target="_blank" rel="noopener noreferrer" className="hover:shadow-lg transition-all duration-300 hover:scale-105">
-            <img src={github} alt="GitHub" className="w-6 h-6" />
-          </a>
+          <div className="flex flex-row justify-start gap-1 bg-white rounded-sm p-1">
+            <a href="https://www.facebook.com/rmoleno15" target="_blank" rel="noopener noreferrer" className="hover:shadow-lg transition-all duration-300 hover:scale-105">
+              <img src={fb} alt="Facebook" className="w-6 h-6" />
+            </a>
+            <a href="https://www.instagram.com/_rm.mndz" target="_blank" rel="noopener noreferrer" className="hover:shadow-lg transition-all duration-300 hover:scale-105">
+              <img src={ig} alt="Instagram" className="w-6 h-6" />
+            </a>
+            <a href="https://www.linkedin.com/in/robert-moleno?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" className="hover:shadow-lg transition-all duration-300 hover:scale-105">    
+              <img src={linkedin} alt="LinkedIn" className="w-6 h-6" />
+            </a>
+            <a href="https://github.com/rmmln" target="_blank" rel="noopener noreferrer" className="hover:shadow-lg transition-all duration-300 hover:scale-105">
+              <img src={github} alt="GitHub" className="w-6 h-6" />
+            </a>
           </div>
         </div>
       </div>
