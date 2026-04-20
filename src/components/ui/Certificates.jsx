@@ -9,8 +9,8 @@ export default function Certificates({ isDarkMode }) {
     <div className={`w-full h-full backdrop-blur-xl border rounded-md p-4 shadow-4xl transition-all duration-300 ${
       isDarkMode ? 'bg-white/10 border-white/20' : 'bg-white border-gray-200'
     }`}>
-      {/* Header na kapareho ng format sa Skills */}
-      <h1 className={`mb-6 text-md font-bold tracking-[0.2em] transition-colors duration-300 ${
+     
+      <h1 className={`mb-2 text-md font-bold tracking-[0.2em] transition-colors duration-300 ${
         isDarkMode ? 'text-white' : 'text-gray-900'
       }`}>
         CERTIFICATIONS
