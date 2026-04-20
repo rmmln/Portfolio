@@ -50,7 +50,7 @@ function App() {
         <h1 className={`flex items-start justify-center text-3xl font-inter font-bold tracking-wide transition-colors duration-300 sm:justify-start sm:text-4xl ${
         isDarkMode ? "text-white" : "text-gray-900"
           }`}>
-          <span className="inline-block w-[350px]">
+          <span className="inline-block w-full overflow-hidden whitespace-nowrap">
             <TypeAnimation
               sequence={["ROBERT MOLENO", 2000, "", 50]}
               speed={50}
