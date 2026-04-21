@@ -55,7 +55,7 @@ function App() {
               sequence={["ROBERT MOLENO", 2000, "", 50]}
               speed={50}
               repeat={Infinity}
-              cursor={false}
+              cursor={true}
             />
           </span>
         </h1>
