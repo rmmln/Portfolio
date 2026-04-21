@@ -43,7 +43,7 @@ function App() {
           <img 
             src={profile} 
             alt="Profile" 
-            className="h-32 w-32 rounded-full object-cover sm:h-40 sm:w-40"
+            className="h-40 w-40 rounded-full object-cover sm:h-40 sm:w-40"
           />
 
       <div className="flex flex-col justify-center gap-1">
