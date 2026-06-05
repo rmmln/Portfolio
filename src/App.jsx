@@ -6,7 +6,7 @@ import ig from "./assets/icons/ig.svg";
 import linkedin from "./assets/icons/linkedin.svg";
 import github from "./assets/icons/github.svg";
 import location from "./assets/icons/location.svg";
-import cvPdf from "./assets/MolenoCV.pdf";
+import cvPdf from "./assets/Resume.pdf";
 
 import Education from "./Education";
 import TechStackIcons from "./components/ui/TechStack";
